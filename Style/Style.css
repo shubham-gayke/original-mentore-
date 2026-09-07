@@ -42,10 +42,10 @@ a {
     right: 0;
     z-index: 999;
     padding: 0;
-    background: rgba(230, 197, 100, 0.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease-in-out;
 }
 
@@ -57,12 +57,88 @@ a {
     justify-content: space-between;
 }
 
-.logo a {
-    display: block;
-    width: 150px;
-    height: 75px;
-    background: url("/Image/logo.png") no-repeat center / contain;
-    text-indent: -9999px;
+/* =========================================================
+   CSS LOGO
+========================================================= */
+.css-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transform: scale(0.95);
+    transition: 0.3s ease-in-out;
+}
+
+.logo-mark {
+    position: relative;
+    width: 48px;
+    height: 36px;
+}
+
+.logo-mark .pill {
+    width: 11px;
+    height: 28px;
+    border-radius: 12px;
+    transform: rotate(30deg);
+}
+
+.black-pill {
+    background-color: #0d0d0d;
+    position: absolute;
+    left: 4px;
+    top: 2px;
+}
+
+.red-pill {
+    background-color: #ff151f;
+    position: absolute;
+    left: 17px;
+    top: 2px;
+}
+
+.circles {
+    position: absolute;
+    left: 33px;
+    top: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.small-circle {
+    width: 9px;
+    height: 9px;
+    background-color: #0d0d0d;
+    border-radius: 50%;
+}
+
+.large-circle {
+    width: 15px;
+    height: 15px;
+    background-color: #0d0d0d;
+    border-radius: 50%;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #0d0d0d;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    line-height: 1.05;
+}
+
+.logo-text .mentore {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo-text .solution {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
 }
 
 .nav-links {
@@ -74,7 +150,7 @@ a {
 
 .nav-links a {
     font-size: 16px;
-    color: rgb(241, 237, 237);
+    color: #222;
     font-weight: 700;
     text-decoration: none;
     padding-bottom: 4px;
@@ -99,10 +175,6 @@ a {
 .hamburger span {
     width: 100%;
     height: 3px;
-    background: white;
-}
-
-.navbar.scrolled .hamburger span {
     background: #111;
 }
 
@@ -2756,11 +2828,11 @@ a {
 ========================================================= */
 
 #bg-media-wrapper {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 0;
     overflow: hidden;
     background: #000;
@@ -2799,7 +2871,7 @@ a {
 ========================================================= */
 
 .bg-mute-btn {
-    position: fixed;
+    position: absolute;
     top: 90px;
     right: 25px;
     z-index: 1001;
