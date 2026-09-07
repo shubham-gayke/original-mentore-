@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training & Placement - Mentore Solution</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/Style/Training.css">
+    <link rel="stylesheet" href="/Style/Placement.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+
+            <!-- LEFT LOGO -->
+            <div class="logo">
+                <a href="/Image/logo.png"></a>
+            </div>
+
+            <!-- CENTER MENU -->
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./career.html">Career</a></li>
+                <li><a href="./traninig.html" class="active">Training & Placement</a></li>
+            </ul>
+
+            <!-- MOBILE MENU ICON -->
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+
+        </div>
+
+        <!-- MOBILE DROPDOWN -->
+        <ul class="mobile-menu" id="mobileMenu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./career.html">Career</a></li>
+            <li><a href="./traninig.html" class="active">Training & Placement</a></li>
+        </ul>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="hero-badge">Job-Orientend Training Programs</span>
+            <h1>Transform Your Career with Expert Training</h1>
+            <p>Hands-on, job-ready courses designed by industry experts. Get 100% placement assistance and lifetime
+                career support.</p>
+        </div>
+
+        <div class="hero-features">
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-award"></i></div>
+                <h3>100% Placement Assistance</h3>
+                <p>Dedicated placement support with interview preparation</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-code"></i></div>
+                <h3>Real-time Projects</h3>
+                <p>Work on live projects to build your portfolio</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-users"></i></div>
+                <h3>Expert Mentors</h3>
+                <p>Learn from industry professionals with years of experience</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+                <h3>Certification</h3>
+                <p>Industry-recognized certificates upon completion</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FILTER SECTION -->
+    <section class="filter-section">
+        <h2>Our Training Programs</h2>
+        <p>Industry-aligned, project-based courses designed to make you job-ready with expert mentorship.</p>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Courses</button>
+            <button class="filter-btn" data-filter="fullstack">Full Stack Development</button>
+            <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button>
+            <button class="filter-btn" data-filter="data">Data Science & Analytics</button>
+            <button class="filter-btn" data-filter="digital">Digital Marketing</button>
+            <button class="filter-btn" data-filter="uiux">UI/UX Design</button>
+        </div>
+    </section>
+
+    <!-- COURSES SECTION - WHITE BACKGROUND -->
+    <section class="courses-section">
+        <div class="section-header">
+            <h1>Our Courses</h1>
+            <p>Comprehensive programs designed to transform beginners into industry-ready professionals</p>
+        </div>
+
+        <div class="courses-grid">
+
+            <!-- Course 1: Full Stack Development -->
+            <div class="course-card" data-category="fullstack">
+                <div class="course-header">
+                    <h2>Full Stack Development</h2>
+                    <p>MERN / Java Stack</p>
+                    <div class="course-badge">4-6 months</div>
+                    <div class="course-badge">Beginner to Advanced</div>
+                </div>
+
+                <div class="course-content">
+                    <div class="course-info">
+                        <span><i class="far fa-clock"></i> 4-6 months</span>
+                        <span><i class="fas fa-signal"></i> Beginner to Advanced</span>
+                    </div>
+
+                    <div class="course-description">
+                        Master both frontend and backend development with hands-on projects.
+                    </div>
+
+                    <div class="course-modules">
+                        <h3><i class="fas fa-layer-group"></i> Key Modules:</h3>
+                        <ul class="modules-list">
+                            <li>HTML, CSS, JavaScript & React</li>
+                            <li>Node.js, Express & MongoDB</li>
+                            <li>REST APIs & Authentication</li>
+                            <li>Deployment & Git</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-details">
+                        <div class="course-eligibility">
+                            <h4><i class="fas fa-user-graduate"></i> Eligibility:</h4>
+                            <div class="eligibility-text">Any Graduate</div>
+                        </div>
+
+                        <div class="course-career">
+                            <h4><i class="fas fa-briefcase"></i> Career Opportunities:</h4>
+                            <div class="career-tags">
+                                <span class="career-tag">Full Stack Developer</span>
+                                <span class="career-tag">Software Engineer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="enroll-btn">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Course 2: Data Science -->
+            <div class="course-card" data-category="data">
+                <div class="course-header">
+                    <h2>Data Science</h2>
+                    <p>Python, ML, AI</p>
+                    <div class="course-badge">6-8 months</div>
+                    <div class="course-badge">Intermediate to Advanced</div>
+                </div>
+
+                <div class="course-content">
+                    <div class="course-info">
+                        <span><i class="far fa-clock"></i> 6-8 months</span>
+                        <span><i class="fas fa-signal"></i> Intermediate to Advanced</span>
+                    </div>
+
+                    <div class="course-description">
+                        Master data analysis, machine learning, and AI with Python.
+                    </div>
+
+                    <div class="course-modules">
+                        <h3><i class="fas fa-layer-group"></i> Key Modules:</h3>
+                        <ul class="modules-list">
+                            <li>Python for Data Science</li>
+                            <li>Statistics & Probability</li>
+                            <li>Machine Learning Algorithms</li>
+                            <li>Deep Learning & AI</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-details">
+                        <div class="course-eligibility">
+                            <h4><i class="fas fa-user-graduate"></i> Eligibility:</h4>
+                            <div class="eligibility-text">Graduate with Math Background</div>
+                        </div>
+
+                        <div class="course-career">
+                            <h4><i class="fas fa-briefcase"></i> Career Opportunities:</h4>
+                            <div class="career-tags">
+                                <span class="career-tag">Data Scientist</span>
+                                <span class="career-tag">ML Engineer</span>
+                                <span class="career-tag">Data Analyst</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="enroll-btn">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Course 3: DevOps & Cloud -->
+            <div class="course-card" data-category="cloud">
+                <div class="course-header">
+                    <h2>DevOps & Cloud</h2>
+                    <p>AWS, Docker, Kubernetes</p>
+                    <div class="course-badge">5-7 months</div>
+                    <div class="course-badge">Intermediate Level</div>
+                </div>
+
+                <div class="course-content">
+                    <div class="course-info">
+                        <span><i class="far fa-clock"></i> 5-7 months</span>
+                        <span><i class="fas fa-signal"></i> Intermediate Level</span>
+                    </div>
+
+                    <div class="course-description">
+                        Learn DevOps practices and cloud infrastructure management.
+                    </div>
+
+                    <div class="course-modules">
+                        <h3><i class="fas fa-layer-group"></i> Key Modules:</h3>
+                        <ul class="modules-list">
+                            <li>Linux & Shell Scripting</li>
+                            <li>AWS Cloud Services</li>
+                            <li>Docker & Kubernetes</li>
+                            <li>CI/CD Pipelines</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-details">
+                        <div class="course-eligibility">
+                            <h4><i class="fas fa-user-graduate"></i> Eligibility:</h4>
+                            <div class="eligibility-text">Basic IT Knowledge</div>
+                        </div>
+
+                        <div class="course-career">
+                            <h4><i class="fas fa-briefcase"></i> Career Opportunities:</h4>
+                            <div class="career-tags">
+                                <span class="career-tag">DevOps Engineer</span>
+                                <span class="career-tag">Cloud Architect</span>
+                                <span class="career-tag">SRE</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="enroll-btn">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Course 4: Mobile App Development -->
+            <div class="course-card" data-category="fullstack">
+                <div class="course-header">
+                    <h2>Mobile App Development</h2>
+                    <p>React Native, Flutter</p>
+                    <div class="course-badge">4-6 months</div>
+                    <div class="course-badge">Beginner to Intermediate</div>
+                </div>
+
+                <div class="course-content">
+                    <div class="course-info">
+                        <span><i class="far fa-clock"></i> 4-6 months</span>
+                        <span><i class="fas fa-signal"></i> Beginner to Intermediate</span>
+                    </div>
+
+                    <div class="course-description">
+                        Build cross-platform mobile apps for iOS and Android.
+                    </div>
+
+                    <div class="course-modules">
+                        <h3><i class="fas fa-layer-group"></i> Key Modules:</h3>
+                        <ul class="modules-list">
+                            <li>JavaScript / Dart Basics</li>
+                            <li>React Native / Flutter</li>
+                            <li>Mobile UI/UX Design</li>
+                            <li>API Integration</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-details">
+                        <div class="course-eligibility">
+                            <h4><i class="fas fa-user-graduate"></i> Eligibility:</h4>
+                            <div class="eligibility-text">Programming Basics</div>
+                        </div>
+
+                        <div class="course-career">
+                            <h4><i class="fas fa-briefcase"></i> Career Opportunities:</h4>
+                            <div class="career-tags">
+                                <span class="career-tag">Mobile Developer</span>
+                                <span class="career-tag">App Developer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="enroll-btn">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Course 5: Cybersecurity -->
+            <div class="course-card" data-category="cloud">
+                <div class="course-header">
+                    <h2>Cybersecurity</h2>
+                    <p>Ethical Hacking, Network Security</p>
+                    <div class="course-badge">5-7 months</div>
+                    <div class="course-badge">Intermediate to Advanced</div>
+                </div>
+
+                <div class="course-content">
+                    <div class="course-info">
+                        <span><i class="far fa-clock"></i> 5-7 months</span>
+                        <span><i class="fas fa-signal"></i> Intermediate to Advanced</span>
+                    </div>
+
+                    <div class="course-description">
+                        Learn to protect systems from digital attacks and threats.
+                    </div>
+
+                    <div class="course-modules">
+                        <h3><i class="fas fa-layer-group"></i> Key Modules:</h3>
+                        <ul class="modules-list">
+                            <li>Network Security</li>
+                            <li>Ethical Hacking</li>
+                            <li>Cryptography</li>
+                            <li>Security Auditing</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-details">
+                        <div class="course-eligibility">
+                            <h4><i class="fas fa-user-graduate"></i> Eligibility:</h4>
+                            <div class="eligibility-text">IT Background Required</div>
+                        </div>
+
+                        <div class="course-career">
+                            <h4><i class="fas fa-briefcase"></i> Career Opportunities:</h4>
+                            <div class="career-tags">
+                                <span class="career-tag">Security Analyst</span>
+                                <span class="career-tag">Ethical Hacker</span>
+                                <span class="career-tag">CISO</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="enroll-btn">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Course 6: UI/UX Design -->
+            <div class="course-card" data-category="uiux">
+                <div class="course-header">
+                    <h2>UI/UX Design</h2>
+                    <p>Figma, Adobe XD</p>
+                    <div class="course-badge">3-5 months</div>
+                    <div class="course-badge">Beginner Friendly</div>
+                </div>
+
+                <div class="course-content">
+                    <div class="course-info">
+                        <span><i class="far fa-clock"></i> 3-5 months</span>
+                        <span><i class="fas fa-signal"></i> Beginner Friendly</span>
+                    </div>
+
+                    <div class="course-description">
+                        Create stunning user interfaces and exceptional user experiences.
+                    </div>
+
+                    <div class="course-modules">
+                        <h3><i class="fas fa-layer-group"></i> Key Modules:</h3>
+                        <ul class="modules-list">
+                            <li>Design Principles</li>
+                            <li>Figma & Adobe XD</li>
+                            <li>User Research</li>
+                            <li>Prototyping & Testing</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-details">
+                        <div class="course-eligibility">
+                            <h4><i class="fas fa-user-graduate"></i> Eligibility:</h4>
+                            <div class="eligibility-text">Any Graduate</div>
+                        </div>
+
+                        <div class="course-career">
+                            <h4><i class="fas fa-briefcase"></i> Career Opportunities:</h4>
+                            <div class="career-tags">
+                                <span class="career-tag">UI/UX Designer</span>
+                                <span class="career-tag">Product Designer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="enroll-btn">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Course 7: Digital Marketing -->
+            <div class="course-card" data-category="digital">
+                <div class="course-header">
+                    <h2>Digital Marketing</h2>
+                    <p>SEO, SEM, Social Media</p>
+                    <div class="course-badge">3-4 months</div>
+                    <div class="course-badge">Beginner Friendly</div>
+                </div>
+
+                <div class="course-content">
+                    <div class="course-info">
+                        <span><i class="far fa-clock"></i> 3-4 months</span>
+                        <span><i class="fas fa-signal"></i> Beginner Friendly</span>
+                    </div>
+
+                    <div class="course-description">
+                        Master digital marketing strategies across all channels.
+                    </div>
+
+                    <div class="course-modules">
+                        <h3><i class="fas fa-layer-group"></i> Key Modules:</h3>
+                        <ul class="modules-list">
+                            <li>SEO & Content Marketing</li>
+                            <li>Google & Facebook Ads</li>
+                            <li>Social Media Marketing</li>
+                            <li>Analytics & Reporting</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-details">
+                        <div class="course-eligibility">
+                            <h4><i class="fas fa-user-graduate"></i> Eligibility:</h4>
+                            <div class="eligibility-text">Any Graduate</div>
+                        </div>
+
+                        <div class="course-career">
+                            <h4><i class="fas fa-briefcase"></i> Career Opportunities:</h4>
+                            <div class="career-tags">
+                                <span class="career-tag">Digital Marketer</span>
+                                <span class="career-tag">SEO Specialist</span>
+                                <span class="career-tag">Social Media Manager</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="enroll-btn">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Course 8: Cloud Computing -->
+            <div class="course-card" data-category="cloud">
+                <div class="course-header">
+                    <h2>Cloud Computing</h2>
+                    <p>AWS, Azure, GCP</p>
+                    <div class="course-badge">4-6 months</div>
+                    <div class="course-badge">Intermediate Level</div>
+                </div>
+
+                <div class="course-content">
+                    <div class="course-info">
+                        <span><i class="far fa-clock"></i> 4-6 months</span>
+                        <span><i class="fas fa-signal"></i> Intermediate Level</span>
+                    </div>
+
+                    <div class="course-description">
+                        Master cloud platforms and services for scalable infrastructure.
+                    </div>
+
+                    <div class="course-modules">
+                        <h3><i class="fas fa-layer-group"></i> Key Modules:</h3>
+                        <ul class="modules-list">
+                            <li>AWS Fundamentals</li>
+                            <li>Azure Services</li>
+                            <li>Google Cloud Platform</li>
+                            <li>Cloud Architecture</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-details">
+                        <div class="course-eligibility">
+                            <h4><i class="fas fa-user-graduate"></i> Eligibility:</h4>
+                            <div class="eligibility-text">Basic IT Knowledge</div>
+                        </div>
+
+                        <div class="course-career">
+                            <h4><i class="fas fa-briefcase"></i> Career Opportunities:</h4>
+                            <div class="career-tags">
+                                <span class="career-tag">Cloud Engineer</span>
+                                <span class="career-tag">Solutions Architect</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="enroll-btn">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Course 9: Blockchain -->
+            <div class="course-card" data-category="fullstack">
+                <div class="course-header">
+                    <h2>Blockchain</h2>
+                    <p>Solidity, Ethereum, Web3</p>
+                    <div class="course-badge">5-7 months</div>
+                    <div class="course-badge">Advanced Level</div>
+                </div>
+
+                <div class="course-content">
+                    <div class="course-info">
+                        <span><i class="far fa-clock"></i> 5-7 months</span>
+                        <span><i class="fas fa-signal"></i> Advanced Level</span>
+                    </div>
+
+                    <div class="course-description">
+                        Learn to build decentralized applications and smart contracts.
+                    </div>
+
+                    <div class="course-modules">
+                        <h3><i class="fas fa-layer-group"></i> Key Modules:</h3>
+                        <ul class="modules-list">
+                            <li>Blockchain Fundamentals</li>
+                            <li>Solidity Programming</li>
+                            <li>Smart Contracts</li>
+                            <li>Web3 Development</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-details">
+                        <div class="course-eligibility">
+                            <h4><i class="fas fa-user-graduate"></i> Eligibility:</h4>
+                            <div class="eligibility-text">Programming Experience</div>
+                        </div>
+
+                        <div class="course-career">
+                            <h4><i class="fas fa-briefcase"></i> Career Opportunities:</h4>
+                            <div class="career-tags">
+                                <span class="career-tag">Blockchain Developer</span>
+                                <span class="career-tag">Smart Contract Developer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="enroll-btn">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Course 10: Java Full Stack -->
+            <div class="course-card" data-category="fullstack">
+                <div class="course-header">
+                    <h2>Java Full Stack</h2>
+                    <p>Spring Boot, React</p>
+                    <div class="course-badge">6-8 months</div>
+                    <div class="course-badge">Intermediate to Advanced</div>
+                </div>
+
+                <div class="course-content">
+                    <div class="course-info">
+                        <span><i class="far fa-clock"></i> 6-8 months</span>
+                        <span><i class="fas fa-signal"></i> Intermediate to Advanced</span>
+                    </div>
+
+                    <div class="course-description">
+                        Build enterprise applications with Java backend and modern frontend.
+                    </div>
+
+                    <div class="course-modules">
+                        <h3><i class="fas fa-layer-group"></i> Key Modules:</h3>
+                        <ul class="modules-list">
+                            <li>Core & Advanced Java</li>
+                            <li>Spring Boot & Microservices</li>
+                            <li>React Frontend</li>
+                            <li>Database Management</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-details">
+                        <div class="course-eligibility">
+                            <h4><i class="fas fa-user-graduate"></i> Eligibility:</h4>
+                            <div class="eligibility-text">Basic Java Knowledge</div>
+                        </div>
+
+                        <div class="course-career">
+                            <h4><i class="fas fa-briefcase"></i> Career Opportunities:</h4>
+                            <div class="career-tags">
+                                <span class="career-tag">Java Developer</span>
+                                <span class="career-tag">Full Stack Developer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="enroll-btn">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Course 11: Python Full Stack -->
+            <div class="course-card" data-category="fullstack">
+                <div class="course-header">
+                    <h2>Python Full Stack</h2>
+                    <p>Django, Flask, React</p>
+                    <div class="course-badge">5-7 months</div>
+                    <div class="course-badge">Beginner to Advanced</div>
+                </div>
+
+                <div class="course-content">
+                    <div class="course-info">
+                        <span><i class="far fa-clock"></i> 5-7 months</span>
+                        <span><i class="fas fa-signal"></i> Beginner to Advanced</span>
+                    </div>
+
+                    <div class="course-description">
+                        Learn Python-based web development with Django/Flask.
+                    </div>
+
+                    <div class="course-modules">
+                        <h3><i class="fas fa-layer-group"></i> Key Modules:</h3>
+                        <ul class="modules-list">
+                            <li>Python Programming</li>
+                            <li>Django/Flask Framework</li>
+                            <li>React Frontend</li>
+                            <li>Database & APIs</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-details">
+                        <div class="course-eligibility">
+                            <h4><i class="fas fa-user-graduate"></i> Eligibility:</h4>
+                            <div class="eligibility-text">Any Graduate</div>
+                        </div>
+
+                        <div class="course-career">
+                            <h4><i class="fas fa-briefcase"></i> Career Opportunities:</h4>
+                            <div class="career-tags">
+                                <span class="career-tag">Python Developer</span>
+                                <span class="career-tag">Full Stack Developer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="enroll-btn">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Course 12: MEAN Stack -->
+            <div class="course-card" data-category="fullstack">
+                <div class="course-header">
+                    <h2>MEAN Stack</h2>
+                    <p>MongoDB, Express, Angular, Node</p>
+                    <div class="course-badge">5-7 months</div>
+                    <div class="course-badge">Intermediate Level</div>
+                </div>
+
+                <div class="course-content">
+                    <div class="course-info">
+                        <span><i class="far fa-clock"></i> 5-7 months</span>
+                        <span><i class="fas fa-signal"></i> Intermediate Level</span>
+                    </div>
+
+                    <div class="course-description">
+                        Build applications with Angular frontend and Node.js backend.
+                    </div>
+
+                    <div class="course-modules">
+                        <h3><i class="fas fa-layer-group"></i> Key Modules:</h3>
+                        <ul class="modules-list">
+                            <li>TypeScript & Angular</li>
+                            <li>Node.js & Express</li>
+                            <li>MongoDB Database</li>
+                            <li>RESTful APIs</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-details">
+                        <div class="course-eligibility">
+                            <h4><i class="fas fa-user-graduate"></i> Eligibility:</h4>
+                            <div class="eligibility-text">Basic JavaScript</div>
+                        </div>
+
+                        <div class="course-career">
+                            <h4><i class="fas fa-briefcase"></i> Career Opportunities:</h4>
+                            <div class="career-tags">
+                                <span class="career-tag">MEAN Developer</span>
+                                <span class="career-tag">Angular Developer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="enroll-btn">Enroll Now <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-box">
+                <h3 class="counter" data-target="5000">0</h3>
+                <p>Students Trained</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="counter" data-target="95">0</h3>
+                <p>Placement Rate</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="counter" data-target="50">0</h3>
+                <p>Industry Experts</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="counter" data-target="100">0</h3>
+                <p>Corporate Partners</p>
+            </div>
+        </div>
+    </section>
+
+
+<!-- =========================================================
+     PLACEMENT SECTION (merged from placement.html)
+========================================================= -->
+
+<main class="placement-page">
+    <section class="placement-hero">
+      <div class="placement-hero-inner">
+        <div class="placement-copy reveal active">
+          <div class="hero-tag"><span></span> Career &amp; Placement</div>
+          <h1>Turn your <em>skills</em><br>into your <strong>career.</strong></h1>
+          <p>We connect trained talent with real opportunities through practical preparation, interview support and
+            industry-focused guidance.</p>
+          <div class="hero-actions">
+            <a href="#success-stories" class="btn-primary">View Success Stories <i class="fas fa-arrow-down"></i></a>
+          </div>
+        </div>
+        <div class="placement-visual">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="career-card card-a"><i class="fas fa-code"></i><span>Software</span><b>Developer</b></div>
+          <div class="career-card card-b"><i class="fas fa-cloud"></i><span>Cloud</span><b>Engineer</b></div>
+          <div class="career-card card-c"><i class="fas fa-chart-line"></i><span>Data</span><b>Analyst</b></div>
+          <div class="career-center"><i class="fas fa-user-tie"></i><small>CAREER</small><strong>READY</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="placement-stats reveal">
+      <div><strong data-target="1000">0</strong><span>Students Guided</span></div>
+      <div><strong data-target="500">0</strong><span>Students Placed</span></div>
+      <div><strong data-target="50">0</strong><span>Hiring Partners</span></div>
+      <div><strong data-target="98">0</strong><span>Career Success %</span></div>
+    </section>
+
+    <section class="section placement-intro">
+      <div class="section-heading reveal">
+        <div class="label">Our Placement Approach</div>
+        <h2>Preparation that feels like the real world.</h2>
+        <p>From technical skills to interview confidence, every step is designed around the expectations of today's
+          hiring process.</p>
+      </div>
+      <div class="placement-process">
+        <article class="process-card reveal"><span>01</span><i class="fas fa-laptop-code"></i>
+          <h3>Build Skills</h3>
+          <p>Strengthen technical foundations through practical projects and hands-on learning.</p>
+        </article>
+        <article class="process-card reveal"><span>02</span><i class="fas fa-file-circle-check"></i>
+          <h3>Prepare Profile</h3>
+          <p>Improve your resume, portfolio and professional presentation for real opportunities.</p>
+        </article>
+        <article class="process-card reveal"><span>03</span><i class="fas fa-comments"></i>
+          <h3>Practice Interviews</h3>
+          <p>Work on technical, HR and communication rounds with focused mock interviews.</p>
+        </article>
+        <article class="process-card reveal"><span>04</span><i class="fas fa-briefcase"></i>
+          <h3>Get Opportunities</h3>
+          <p>Access placement guidance and opportunities aligned with your skills and goals.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="success-section" id="success-stories">
+      <div class="section-heading reveal">
+        <div class="label">Success Stories</div>
+        <h2>Our students. Their success.</h2>
+        <p>Meet the learners who turned their skills into real career opportunities.</p>
+      </div>
+
+      <div class="success-window">
+        <div class="success-track" id="successTrack">
+
+          <article class="success-card">
+            <div class="student-photo"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Aditya Sharma">
+            </div>
+            <div class="student-info">
+              <span class="placed-badge">PLACED</span>
+              <h3>Aditya Sharma</h3>
+              <p class="student-position">Software Developer</p>
+              <p class="student-company"><i class="fas fa-building"></i> TCS</p>
+            </div>
+            <div class="salary-box"><span>PACKAGE</span><strong>₹5.2 LPA</strong></div>
+          </article>
+
+          <article class="success-card">
+            <div class="student-photo"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Patil">
+            </div>
+            <div class="student-info">
+              <span class="placed-badge">PLACED</span>
+              <h3>Priya Patil</h3>
+              <p class="student-position">Frontend Developer</p>
+              <p class="student-company"><i class="fas fa-building"></i> Infosys</p>
+            </div>
+            <div class="salary-box"><span>PACKAGE</span><strong>₹4.8 LPA</strong></div>
+          </article>
+
+          <article class="success-card">
+            <div class="student-photo"><img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Rahul Kulkarni">
+            </div>
+            <div class="student-info">
+              <span class="placed-badge">PLACED</span>
+              <h3>Rahul Kulkarni</h3>
+              <p class="student-position">Java Developer</p>
+              <p class="student-company"><i class="fas fa-building"></i> Capgemini</p>
+            </div>
+            <div class="salary-box"><span>PACKAGE</span><strong>₹6.0 LPA</strong></div>
+          </article>
+
+          <article class="success-card">
+            <div class="student-photo"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sneha More">
+            </div>
+            <div class="student-info">
+              <span class="placed-badge">PLACED</span>
+              <h3>Sneha More</h3>
+              <p class="student-position">Cloud Engineer</p>
+              <p class="student-company"><i class="fas fa-building"></i> Wipro</p>
+            </div>
+            <div class="salary-box"><span>PACKAGE</span><strong>₹5.5 LPA</strong></div>
+          </article>
+
+          <article class="success-card">
+            <div class="student-photo"><img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Vivek Jadhav">
+            </div>
+            <div class="student-info">
+              <span class="placed-badge">PLACED</span>
+              <h3>Vivek Jadhav</h3>
+              <p class="student-position">Data Analyst</p>
+              <p class="student-company"><i class="fas fa-building"></i> Accenture</p>
+            </div>
+            <div class="salary-box"><span>PACKAGE</span><strong>₹5.0 LPA</strong></div>
+          </article>
+
+          <article class="success-card">
+            <div class="student-photo"><img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Neha Joshi">
+            </div>
+            <div class="student-info">
+              <span class="placed-badge">PLACED</span>
+              <h3>Neha Joshi</h3>
+              <p class="student-position">MERN Stack Developer</p>
+              <p class="student-company"><i class="fas fa-building"></i> Tech Mahindra</p>
+            </div>
+            <div class="salary-box"><span>PACKAGE</span><strong>₹6.2 LPA</strong></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section companies-section">
+      <div class="section-heading reveal">
+        <div class="label">Career Direction</div>
+        <h2>Built for different paths.</h2>
+        <p>Explore roles across software development, cloud, data, testing and modern technology careers.</p>
+      </div>
+      <div class="role-grid">
+        <div class="role-card reveal"><i class="fas fa-terminal"></i>
+          <h3>Development</h3>
+          <p>Java · MERN · Frontend · Backend</p>
+        </div>
+        <div class="role-card reveal"><i class="fas fa-cloud-arrow-up"></i>
+          <h3>Cloud & DevOps</h3>
+          <p>AWS · Docker · Linux · CI/CD</p>
+        </div>
+        <div class="role-card reveal"><i class="fas fa-database"></i>
+          <h3>Data</h3>
+          <p>SQL · Analytics · Reporting</p>
+        </div>
+        <div class="role-card reveal"><i class="fas fa-vial-circle-check"></i>
+          <h3>Testing</h3>
+          <p>Manual · Automation · API Testing</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="partners-section">
+        <h2>Our Students Placed in Top Companies</h2>
+        <div class="partners-slider">
+            <div class="slide-track">
+                <div class="partner-item"><img src="https://i.pinimg.com/1200x/b0/de/60/b0de6006aee3fce314fc2575019d0b0d.jpg"></div>
+                <div class="partner-item"><img src="https://i.pinimg.com/736x/d2/32/5e/d2325e4ea3a16ec25ff35603c8003a5f.jpg"></div>
+                <div class="partner-item"><img src="https://i.pinimg.com/1200x/06/1d/ca/061dcafd76f4d6ff18db3e18fe8ca316.jpg"></div>
+                <div class="partner-item"><img src="https://i.pinimg.com/736x/09/ac/64/09ac6418962ad0d21280f9e3321e0d01.jpg"></div>
+                <div class="partner-item"><img src="https://i.pinimg.com/736x/cc/06/71/cc06711bdcf55b7352e5e74f0d8e2d41.jpg"></div>
+                <div class="partner-item"><img src="https://i.pinimg.com/1200x/97/83/22/9783222e98b0d5141519b41e7203ff9a.jpg"></div>
+                <div class="partner-item"><img src="https://i.pinimg.com/1200x/7c/b5/df/7cb5dfa2786c33a3411f252313aeefb3.jpg"></div>
+                <div class="partner-item"><img src="https://i.pinimg.com/736x/c8/dc/e1/c8dce16663e5e2d215231332e9e6287e.jpg"></div>
+                <div class="partner-item"><img src="https://i.pinimg.com/1200x/fd/b3/b9/fdb3b9b6bb84c009ed500547542e9333.jpg"></div>
+                <div class="partner-item"><img src="https://i.pinimg.com/736x/2d/bb/0f/2dbb0ff968953a734143faa96e1ddff1.jpg"></div>
+                <div class="partner-item"><img src="https://i.pinimg.com/1200x/4d/c5/74/4dc5742211ef451e37634edfa2e6101a.jpg"></div>
+                <div class="partner-item"><img src="https://i.pinimg.com/1200x/ed/96/16/ed96168483f887cbbfa92bac32cf776f.jpg"></div>
+                <div class="partner-item"><img src="https://i.pinimg.com/1200x/a0/e6/91/a0e6913a3473cc42c7f0212b65399d46.jpg"></div>
+                <div class="partner-item"><img src="https://i.pinimg.com/1200x/f0/9f/60/f09f6008338a2e8e41249c0421dbf2ee.jpg"></div>
+                <div class="partner-item"><img src="https://i.pinimg.com/736x/63/5b/1d/635b1da90ddb7165cf167ca61e38f85f.jpg"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="placement-cta reveal">
+      <div><span>READY FOR THE NEXT STEP?</span>
+        <h2>Your next opportunity can start here.</h2>
+        <p>Build your skills, strengthen your profile and move forward with confidence.</p>
+      </div>
+      <a href="https://wa.me/919881922922" class="btn-primary">Start Your Journey <i class="fas fa-arrow-right"></i></a>
+    </section>
+</main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <a href="#">Mentore Solution</a>
+                </div>
+                <p class="footer-about">We provide industry-focused training programs designed to help students and
+                    professionals enhance their skills and build successful careers.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./itservices.html">IT Services</a></li>
+                    <li><a href="./career.html">Career</a></li>
+                    <li><a href="./traninig.html">Training & Placement</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Popular Courses</h3>
+                <ul>
+                    <li><a href="#">Full Stack Development</a></li>
+                    <li><a href="#">DevOps & Cloud Computing</a></li>
+                    <li><a href="#">Digital Marketing</a></li>
+                    <li><a href="#">Data Analytics & Power BI</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Phone: +91 9881922922</li>
+                    <li>Email: mentoresolution@gmail.com</li>
+                    <li>Address: Karve Nagar, Pune</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Mentore Solution. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="/Script/Training.js"></script>
+    <script src="/Script/Placement.js"></script>
+</body>
+
+</html>

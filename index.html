@@ -1,0 +1,2467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mentore Solution</title>
+    <link rel="stylesheet" href="Style/Style.css">
+    <link rel="stylesheet" href="Style/Itservices.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     FULLSCREEN BACKGROUND MEDIA
+========================================================= -->
+
+<div id="bg-media-wrapper">
+
+    <!-- VIDEO 1 -->
+    <video
+        id="bgVideo1"
+        class="bg-media-item active"
+        muted
+        playsinline
+        preload="auto"
+        src="bg IMG/first 7 sec .mp4"
+    ></video>
+
+    <!-- VIDEO 2 -->
+    <video
+        id="bgVideo2"
+        class="bg-media-item"
+        muted
+        playsinline
+        preload="none"
+        src="bg IMG/video1.5.mp4"
+    ></video>
+
+    <!-- VIDEO 3 -->
+    <video
+        id="bgVideo3"
+        class="bg-media-item"
+        muted
+        playsinline
+        preload="none"
+        src="bg IMG/video 2.mp4"
+    ></video>
+
+    <!-- IMAGE 1 -->
+    <img
+        id="bgImg1"
+        class="bg-media-item"
+        src="bg IMG/1 IMG.png"
+        alt="Background 1"
+        loading="lazy"
+    >
+
+    <!-- IMAGE 2 -->
+    <img
+        id="bgImg2"
+        class="bg-media-item"
+        src="bg IMG/2 IMG.png"
+        alt="Background 2"
+        loading="lazy"
+    >
+
+    <!-- IMAGE 3 -->
+    <img
+        id="bgImg3"
+        class="bg-media-item"
+        src="bg IMG/3 IMG.png"
+        alt="Background 3"
+        loading="lazy"
+    >
+
+    <!-- IMAGE 4 -->
+    <img
+        id="bgImg4"
+        class="bg-media-item"
+        src="bg IMG/4 IMG.png"
+        alt="Background 4"
+        loading="lazy"
+    >
+
+    <!-- DARK OVERLAY -->
+    <div id="bg-media-overlay"></div>
+
+</div>
+
+
+<!-- BACKGROUND AUDIO -->
+<audio
+    id="bgAudio"
+    src="bg IMG/english only.mp3"
+    loop
+    preload="auto"
+></audio>
+
+
+<!-- MUTE / UNMUTE BUTTON -->
+<button
+    id="bgMuteBtn"
+    class="bg-mute-btn"
+    aria-label="Unmute background audio"
+    title="Unmute background audio"
+>
+    <i class="fa-solid fa-volume-xmark"></i>
+</button>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <!-- LEFT LOGO -->
+
+        <div class="logo">
+
+            <a href="/Image/logo.png"></a>
+
+        </div>
+
+
+        <!-- CENTER MENU -->
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="./index.html" class="active">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="./Pages/career.html">
+                    Career
+                </a>
+            </li>
+
+            <li>
+                <a href="./Pages/traninig.html">
+                    Training & Placement
+                </a>
+            </li>
+
+            <!-- HIDDEN: About Us (kept for future use)
+            <li>
+                <a href="./Pages/about.html">
+                    About Us
+                </a>
+            </li>
+            -->
+
+        </ul>
+
+
+        <!-- RIGHT NUMBER -->
+
+
+        <!-- MOBILE MENU ICON -->
+
+        <div
+            class="hamburger"
+            id="hamburger"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+    </div>
+
+
+    <!-- MOBILE DROPDOWN -->
+
+    <ul
+        class="mobile-menu"
+        id="mobileMenu"
+    >
+
+        <li>
+            <a
+                href="./index.html"
+                class="active"
+            >
+                Home
+            </a>
+        </li>
+
+        <li>
+            <a href="./Pages/career.html">
+                Career
+            </a>
+        </li>
+
+        <li>
+            <a href="./Pages/traninig.html">
+                Training & Placement
+            </a>
+        </li>
+
+    </ul>
+
+</header>
+
+
+
+
+
+<!-- =========================================================
+     CERTIFICATION SECTION
+========================================================= -->
+
+<!-- we want remove this carousal -->
+
+<section class="certification-section">
+
+
+
+    <!-- HEADER -->
+
+    <div class="section-header">
+
+        <div class="mentore-logo">
+
+            <img
+                src="Image/symbol.png"
+                alt="Mentore Solution Logo"
+            >
+
+        </div>
+
+
+        <h1 class="typing-heading">
+
+            <span id="typing-text"></span>
+
+            <span class="cursor">|</span>
+
+        </h1>
+
+    </div>
+
+
+
+</section>
+<!-- =========================================================
+     ABOUT SECTION
+========================================================= -->
+
+<section class="about-section">
+
+    <div class="about-container">
+
+
+        <h2 class="about-title">
+
+            About Mentore Solution
+
+        </h2>
+
+
+        <p class="about-text">
+
+            Mentore Solution is committed to delivering industry-standard IT services, practical training, and
+            real-world mentoring that helps individuals and businesses achieve measurable success.
+
+        </p>
+
+
+        <!-- FEATURES -->
+
+        <div class="features-grid">
+
+
+            <div class="feature-box">
+
+                <i class="fa-solid fa-laptop-code feature-icon"></i>
+
+                <h3>
+                    Best IT Solution
+                </h3>
+
+                <p>
+                    We offer modern IT services designed to solve real-world business needs efficiently.
+                </p>
+
+            </div>
+
+
+            <div class="feature-box">
+
+                <i class="fa-solid fa-graduation-cap feature-icon"></i>
+
+                <h3>
+                    Industry Relevant Training
+                </h3>
+
+                <p>
+                    Training programs built to match current market demands and job-ready skills.
+                </p>
+
+            </div>
+
+
+            <div class="feature-box">
+
+                <i class="fa-solid fa-users feature-icon"></i>
+
+                <h3>
+                    1000+ Satisfied Clients
+                </h3>
+
+                <p>
+                    Trusted by individuals and businesses across diverse industries.
+                </p>
+
+            </div>
+
+
+            <div class="feature-box">
+
+                <i class="fa-solid fa-user-tie feature-icon"></i>
+
+                <h3>
+                    Real Mentorship
+                </h3>
+
+                <p>
+                    Guidance from experts with hands-on industry experience.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     IT SERVICES SECTION (merged from itservices.html)
+========================================================= -->
+
+<section class="it-services" style="margin-top: 0;">
+    <span class="hero-particle p1" aria-hidden="true"></span>
+    <span class="hero-particle p2" aria-hidden="true"></span>
+    <span class="hero-particle p3" aria-hidden="true"></span>
+    <div class="it-container">
+        <div class="small-heading">Professional IT Services</div>
+        <h2 class="main-heading">Comprehensive Technology Solutions for Your Business</h2>
+        <p class="it-desc">
+            From custom software development to digital marketing, we provide end-to-end IT services with
+            <strong>1 year free support</strong>.
+        </p>
+    </div>
+</section>
+
+<section class="services-section">
+    <h2>Our IT Services</h2>
+    <p>Comprehensive solutions designed to drive your business forward.</p>
+
+    <div class="services-grid">
+
+        <!-- Box 1 -->
+        <div class="service-box">
+            <h3><i class="fas fa-laptop-code"></i> Custom Software Development</h3>
+            <p class="description">Tailored software solutions built with cutting-edge technologies to meet your unique business requirements.</p>
+            <div class="section-title">Key Features:</div>
+            <div class="features-row">
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Enterprise Application Development</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>SaaS Product Development</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Legacy System Modernization</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>API Development & Integration</div>
+            </div>
+            <div class="section-title">Benefits:</div>
+            <div class="features-row">
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Scalable & Secure Architecture</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Agile Development Process</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Post-Launch Support</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>1 Year Free Maintenance</div>
+            </div>
+            <div class="section-title">Technologies We Use:</div>
+            <div class="tech-tags">
+                <div class="tech">React</div>
+                <div class="tech">Node.js</div>
+                <div class="tech">Python</div>
+                <div class="tech">Java</div>
+                <div class="tech">.NET</div>
+            </div>
+            <button class="consult-btn">Get a Free Consultation</button>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="service-box">
+            <h3><i class="fas fa-globe"></i> Website Development Services</h3>
+            <p class="description">Professional, responsive websites that drive engagement and deliver exceptional user experiences.</p>
+            <div class="section-title">Key Features:</div>
+            <div class="features-row">
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Corporate Website Development</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>E-commerce Platforms</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>CMS-based Websites</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Progressive Web Apps (PWA)</div>
+            </div>
+            <div class="section-title">Benefits:</div>
+            <div class="features-row">
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Mobile-First Design</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>SEO Optimized</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Fast Loading Speed</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Conversion Focused</div>
+            </div>
+            <div class="section-title">Technologies We Use:</div>
+            <div class="tech-tags">
+                <div class="tech">Next.js</div>
+                <div class="tech">WordPress</div>
+                <div class="tech">Shopify</div>
+                <div class="tech">React</div>
+                <div class="tech">Vue.js</div>
+            </div>
+            <button class="consult-btn">Get a Free Consultation</button>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="service-box">
+            <h3><i class="fas fa-cloud"></i> Cloud & DevOps Services</h3>
+            <p class="description">Scalable cloud infrastructure and DevOps automation for seamless deployment and operations.</p>
+            <div class="section-title">Key Features:</div>
+            <div class="features-row">
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Cloud Migration & Setup</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Infrastructure as Code</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>CI/CD Pipeline Implementation</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Container Orchestration</div>
+            </div>
+            <div class="section-title">Benefits:</div>
+            <div class="features-row">
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Reduced Operational Costs</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Improved Scalability</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Faster Deployment</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>99.9% Uptime SLA</div>
+            </div>
+            <div class="section-title">Technologies We Use:</div>
+            <div class="tech-tags">
+                <div class="tech">AWS</div>
+                <div class="tech">Azure</div>
+                <div class="tech">Docker</div>
+                <div class="tech">Kubernetes</div>
+                <div class="tech">Jenkins</div>
+            </div>
+            <button class="consult-btn">Get a Free Consultation</button>
+        </div>
+
+        <!-- Box 4 -->
+        <div class="service-box">
+            <h3><i class="fas fa-headset"></i> IT Consulting & Support</h3>
+            <p class="description">Expert guidance and 24/7 support to optimize your IT infrastructure and business processes.</p>
+            <div class="section-title">Key Features:</div>
+            <div class="features-row">
+                <div class="feature-item"><i class="fas fa-check-circle"></i>IT Strategy & Planning</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Technology Assessment</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>System Integration</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>24/7 Technical Support</div>
+            </div>
+            <div class="section-title">Benefits:</div>
+            <div class="features-row">
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Expert Guidance</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Cost Optimization</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Risk Mitigation</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Continuous Improvement</div>
+            </div>
+            <div class="section-title">Technologies We Use:</div>
+            <div class="tech-tags">
+                <div class="tech">Multi-Platform</div>
+                <div class="tech">Cross-Technology</div>
+                <div class="tech">Vendor Agnostic</div>
+            </div>
+            <button class="consult-btn">Get a Free Consultation</button>
+        </div>
+
+        <!-- Box 5 -->
+        <div class="service-box">
+            <h3><i class="fas fa-bullhorn"></i> Digital Marketing Services</h3>
+            <p class="description">Data-driven marketing strategies to boost your online presence and drive business growth.</p>
+            <div class="section-title">Key Features:</div>
+            <div class="features-row">
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Search Engine Optimization (SEO)</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Pay-Per-Click Advertising (PPC)</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Social Media Marketing</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Content Marketing & Strategy</div>
+            </div>
+            <div class="section-title">Benefits:</div>
+            <div class="features-row">
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Increased Online Visibility</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Higher Conversion Rates</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Measurable ROI</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Brand Building</div>
+            </div>
+            <div class="section-title">Technologies We Use:</div>
+            <div class="tech-tags">
+                <div class="tech">Google Ads</div>
+                <div class="tech">Facebook Ads</div>
+                <div class="tech">Analytics</div>
+                <div class="tech">SEO Tools</div>
+            </div>
+            <button class="consult-btn">Get a Free Consultation</button>
+        </div>
+
+        <!-- Box 6 -->
+        <div class="service-box">
+            <h3><i class="fas fa-robot"></i> Automation & Integration Solutions</h3>
+            <p class="description">Streamline operations with intelligent automation and seamless system integrations.</p>
+            <div class="section-title">Key Features:</div>
+            <div class="features-row">
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Business Process Automation</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Third-Party API Integration</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Workflow Automation</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Data Synchronization</div>
+            </div>
+            <div class="section-title">Benefits:</div>
+            <div class="features-row">
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Increased Efficiency</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Reduced Manual Errors</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Time Savings</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Better Data Flow</div>
+            </div>
+            <div class="section-title">Technologies We Use:</div>
+            <div class="tech-tags">
+                <div class="tech">Zapier</div>
+                <div class="tech">Make</div>
+                <div class="tech">Custom APIs</div>
+                <div class="tech">Webhooks</div>
+            </div>
+            <button class="consult-btn">Get a Free Consultation</button>
+        </div>
+
+        <!-- Box 7 -->
+        <div class="service-box">
+            <h3><i class="fas fa-mobile-alt"></i> Application Development Services</h3>
+            <p class="description">Native and cross-platform mobile applications that deliver seamless user experiences.</p>
+            <div class="section-title">Key Features:</div>
+            <div class="features-row">
+                <div class="feature-item"><i class="fas fa-check-circle"></i>iOS & Android Development</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Cross-Platform Apps</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>App Maintenance & Updates</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>App Store Optimization</div>
+            </div>
+            <div class="section-title">Benefits:</div>
+            <div class="features-row">
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Native Performance</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Intuitive UI/UX</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Offline Functionality</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Push Notifications</div>
+            </div>
+            <div class="section-title">Technologies We Use:</div>
+            <div class="tech-tags">
+                <div class="tech">React Native</div>
+                <div class="tech">Flutter</div>
+                <div class="tech">Swift</div>
+                <div class="tech">Kotlin</div>
+            </div>
+            <button class="consult-btn">Get a Free Consultation</button>
+        </div>
+
+        <!-- Box 8 -->
+        <div class="service-box">
+            <h3><i class="fas fa-database"></i> Custom CRM & ERP Systems</h3>
+            <p class="description">Tailored business management systems to streamline your operations and improve efficiency.</p>
+            <div class="section-title">Key Features:</div>
+            <div class="features-row">
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Customer Relationship Management</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Enterprise Resource Planning</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Inventory Management</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Sales & Analytics Dashboard</div>
+            </div>
+            <div class="section-title">Benefits:</div>
+            <div class="features-row">
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Centralized Data</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Process Automation</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Better Decision Making</div>
+                <div class="feature-item"><i class="fas fa-check-circle"></i>Improved Productivity</div>
+            </div>
+            <div class="section-title">Technologies We Use:</div>
+            <div class="tech-tags">
+                <div class="tech">Custom Built</div>
+                <div class="tech">Salesforce</div>
+                <div class="tech">Odoo</div>
+                <div class="tech">SAP</div>
+            </div>
+            <button class="consult-btn">Get a Free Consultation</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="why-choose">
+    <h2 class="why-title">Why Choose Our IT Services?</h2>
+    <p class="why-subtitle">
+        Trusted solutions designed to deliver performance, reliability, and long-term value.
+    </p>
+
+    <div class="why-grid">
+
+        <div class="why-box">
+            <i class="fas fa-shield-alt"></i>
+            <h3>1 Year Free Support</h3>
+            <p>Enjoy complete peace of mind with one full year of free technical support and maintenance.</p>
+        </div>
+
+        <div class="why-box">
+            <i class="fas fa-sync-alt"></i>
+            <h3>Agile Methodology</h3>
+            <p>Flexible and transparent development process ensuring faster delivery and continuous improvement.</p>
+        </div>
+
+        <div class="why-box">
+            <i class="fas fa-check-circle"></i>
+            <h3>Quality Assurance</h3>
+            <p>Rigorous testing standards to ensure secure, stable, and high-performance solutions.</p>
+        </div>
+
+        <div class="why-box">
+            <i class="fas fa-headset"></i>
+            <h3>24/7 Support</h3>
+            <p>Dedicated support team available around the clock to keep your business running smoothly.</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- =========================================================
+     TRAINING PROGRAMS SECTION
+========================================================= -->
+
+<section
+    class="training-section"
+    id="training"
+>
+
+    <div class="training-heading">
+
+        <h2>
+            Our Training Programs
+        </h2>
+
+        <p>
+            Upgrade your career with industry-designed programs delivered by expert mentors.
+        </p>
+
+    </div>
+
+
+    <div class="training-container">
+
+
+        <!-- Box 1 -->
+
+        <div class="training-box">
+
+            <img
+                src="/Image/Full-stack Development.jpg"
+                alt="Full Stack Development"
+                class="training-img"
+            >
+
+            <h3>
+                Full Stack Development
+            </h3>
+
+            <p>
+                Become a job-ready full stack developer by mastering frontend, backend, databases, and deployment.
+            </p>
+
+
+            <!-- Key Features -->
+
+            <ul class="key-features">
+
+                <li>
+                    Hands-on real industry projects
+                </li>
+
+                <li>
+                    Frontend + Backend + Database mastery
+                </li>
+
+                <li>
+                    Interview preparation & resume building
+                </li>
+
+            </ul>
+
+
+            <span class="duration">
+                Duration: 6 Months
+            </span>
+
+        </div>
+
+
+        <!-- Box 2 -->
+
+        <div class="training-box">
+
+            <img
+                src="/Image/DevOps.jpg"
+                alt="DevOps & Cloud"
+                class="training-img"
+            >
+
+            <h3>
+                DevOps & Cloud Computing
+            </h3>
+
+            <p>
+                Learn cloud platforms, automation tools, and CI/CD pipelines used in modern IT companies.
+            </p>
+
+
+            <ul class="key-features">
+
+                <li>
+                    AWS, Azure, Docker, Kubernetes
+                </li>
+
+                <li>
+                    CI/CD, Jenkins, Automation workflows
+                </li>
+
+                <li>
+                    Deployment & monitoring tools
+                </li>
+
+            </ul>
+
+
+            <span class="duration">
+                Duration: 5 Months
+            </span>
+
+        </div>
+
+
+        <!-- Box 3 -->
+
+        <div class="training-box">
+
+            <img
+                src="/Image/Digital Markiting.jpg"
+                alt="Digital Marketing"
+                class="training-img"
+            >
+
+            <h3>
+                Digital Marketing
+            </h3>
+
+            <p>
+                Learn complete digital strategies to grow brands across all online platforms.
+            </p>
+
+
+            <ul class="key-features">
+
+                <li>
+                    SEO + Google Ads + Meta Ads
+                </li>
+
+                <li>
+                    Content & Social Media Strategy
+                </li>
+
+                <li>
+                    Analytics & campaign tracking
+                </li>
+
+            </ul>
+
+
+            <span class="duration">
+                Duration: 3 Months
+            </span>
+
+        </div>
+
+
+        <!-- Box 4 -->
+
+        <div class="training-box">
+
+            <img
+                src="/Image/data.jpg"
+                alt="Data Analytics & Power BI"
+                class="training-img"
+            >
+
+            <h3>
+                Data Analytics & Power BI
+            </h3>
+
+            <p>
+                Become a data analyst by mastering data analysis, visualization, and business intelligence.
+            </p>
+
+
+            <ul class="key-features">
+
+                <li>
+                    Advanced Excel, SQL, Power BI
+                </li>
+
+                <li>
+                    DAX formulas & dashboard creation
+                </li>
+
+                <li>
+                    Real business case studies
+                </li>
+
+            </ul>
+
+
+            <span class="duration">
+                Duration: 4 Months
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="explore-container">
+
+        <button id="exploreCoursesBtn">
+            Explore All Courses
+        </button>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =========================================================
+     CERTIFICATIONS ONLY SECTION
+========================================================= -->
+<section class="standalone-certifications" style="padding: 50px 0; background: #fff; overflow: hidden;">
+    <!-- TOP SLIDER -->
+
+    <div class="slider top-slider">
+
+        <div class="slider-track">
+
+
+            <div class="certificate">
+
+                <img src="images/certificate-1.png">
+
+            </div>
+
+
+            <div class="certificate">
+
+                <img src="images/certificate-2.png">
+
+            </div>
+
+
+            <div class="certificate">
+
+                <img src="images/certificate-3.png">
+
+            </div>
+
+
+            <div class="certificate">
+
+                <img src="images/certificate-4.png">
+
+            </div>
+
+
+            <div class="certificate">
+
+                <img src="images/certificate-5.png">
+
+            </div>
+
+
+            <!-- DUPLICATE SET -->
+
+            <div class="certificate">
+
+                <img src="images/certificate-1.png">
+
+            </div>
+
+
+            <div class="certificate">
+
+                <img src="images/certificate-2.png">
+
+            </div>
+
+
+            <div class="certificate">
+
+                <img src="images/certificate-3.png">
+
+            </div>
+
+
+            <div class="certificate">
+
+                <img src="images/certificate-4.png">
+
+            </div>
+
+
+            <div class="certificate">
+
+                <img src="images/certificate-5.png">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOTTOM SLIDER -->
+
+    <div class="slider bottom-slider">
+
+        <div class="slider-track">
+
+
+            <div class="certificate">
+
+                <img src="images/certificate-6.png">
+
+            </div>
+
+
+            <div class="certificate">
+
+                <img src="images/certificate-7.png">
+
+            </div>
+
+
+            <div class="certificate">
+
+                <img src="images/certificate-8.png">
+
+            </div>
+
+
+            <div class="certificate">
+
+                <img src="images/certificate-9.png">
+
+            </div>
+
+
+            <div class="certificate">
+
+                <img src="images/certificate-10.png">
+
+            </div>
+
+
+            <!-- DUPLICATE SET -->
+
+            <div class="certificate">
+
+                <img src="images/certificate-6.png">
+
+            </div>
+
+
+            <div class="certificate">
+
+                <img src="images/certificate-7.png">
+
+            </div>
+
+
+            <div class="certificate">
+
+                <img src="images/certificate-8.png">
+
+            </div>
+
+
+            <div class="certificate">
+
+                <img src="images/certificate-9.png">
+
+            </div>
+
+
+            <div class="certificate">
+
+                <img src="images/certificate-10.png">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     SUCCESS STORIES SECTION
+========================================================= -->
+
+<section class="success-section">
+
+
+    <div class="success-header">
+
+        <div class="success-label">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            Student Experiences
+
+        </div>
+
+
+        <h2 class="success-title">
+
+            Real Students.
+
+            <span>
+                Real Growth.
+            </span>
+
+        </h2>
+
+
+        <p class="success-subtitle">
+
+            Hear from students who transformed their skills,
+            built real-world experience and moved forward in
+            their careers.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="success-slider">
+
+        <div
+            class="success-track"
+            id="successTrack"
+        >
+
+
+            <!-- CARD 1 -->
+
+            <div class="success-box">
+
+                <div class="review-top">
+
+                    <div class="stars">
+
+                        ★★★★★
+
+                        <span>
+                            5.0
+                        </span>
+
+                    </div>
+
+
+                    <span class="verified">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Verified
+
+                    </span>
+
+                </div>
+
+
+                <div class="quote-icon">
+                    “
+                </div>
+
+
+                <p class="review">
+
+                    I joined the Full Stack Development program with
+                    very limited project experience. The live projects,
+                    code reviews and interview preparation helped me
+                    become much more confident as a developer.
+
+                </p>
+
+
+                <div class="student-details">
+
+                    <h3>
+                        Ananya Sharma
+                    </h3>
+
+                    <p class="student-role">
+                        Junior Full Stack Developer
+                    </p>
+
+
+                    <div class="student-meta">
+
+                        <span>
+
+                            <i class="fa-solid fa-building"></i>
+
+                            TechNova Solutions
+
+                        </span>
+
+
+                        <strong>
+                            Placed
+                        </strong>
+
+                    </div>
+
+
+                    <small>
+                        Full Stack Development
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 2 -->
+
+            <div class="success-box">
+
+                <div class="review-top">
+
+                    <div class="stars">
+
+                        ★★★★½
+
+                        <span>
+                            4.5
+                        </span>
+
+                    </div>
+
+
+                    <span class="verified">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Verified
+
+                    </span>
+
+                </div>
+
+
+                <div class="quote-icon">
+                    “
+                </div>
+
+
+                <p class="review">
+
+                    The DevOps training was practical and industry
+                    focused. Working with Linux, Docker and AWS helped
+                    me understand how applications are actually
+                    deployed in production environments.
+
+                </p>
+
+
+                <div class="student-details">
+
+                    <h3>
+                        Rahul Verma
+                    </h3>
+
+                    <p class="student-role">
+                        Cloud Operations Engineer
+                    </p>
+
+
+                    <div class="student-meta">
+
+                        <span>
+
+                            <i class="fa-solid fa-building"></i>
+
+                            CloudEdge Technologies
+
+                        </span>
+
+
+                        <strong>
+                            Placed
+                        </strong>
+
+                    </div>
+
+
+                    <small>
+                        DevOps & Cloud Computing
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 3 -->
+
+            <div class="success-box">
+
+                <div class="review-top">
+
+                    <div class="stars">
+
+                        ★★★★★
+
+                        <span>
+                            5.0
+                        </span>
+
+                    </div>
+
+
+                    <span class="verified">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Verified
+
+                    </span>
+
+                </div>
+
+
+                <div class="quote-icon">
+                    “
+                </div>
+
+
+                <p class="review">
+
+                    The practical approach made the Digital Marketing
+                    course very useful. Working on campaigns and case
+                    studies helped me understand how marketing works
+                    in a real business environment.
+
+                </p>
+
+
+                <div class="student-details">
+
+                    <h3>
+                        Sneha Patil
+                    </h3>
+
+                    <p class="student-role">
+                        Digital Marketing Executive
+                    </p>
+
+
+                    <div class="student-meta">
+
+                        <span>
+
+                            <i class="fa-solid fa-building"></i>
+
+                            GrowthHive Media
+
+                        </span>
+
+
+                        <strong>
+                            Placed
+                        </strong>
+
+                    </div>
+
+
+                    <small>
+                        Digital Marketing
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 4 -->
+
+            <div class="success-box">
+
+                <div class="review-top">
+
+                    <div class="stars">
+
+                        ★★★★½
+
+                        <span>
+                            4.5
+                        </span>
+
+                    </div>
+
+
+                    <span class="verified">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Verified
+
+                    </span>
+
+                </div>
+
+
+                <div class="quote-icon">
+                    “
+                </div>
+
+
+                <p class="review">
+
+                    Real-world datasets and Power BI dashboards helped
+                    me understand analytics much better. The interview
+                    preparation also helped me present my projects
+                    professionally.
+
+                </p>
+
+
+                <div class="student-details">
+
+                    <h3>
+                        Manoj Kulkarni
+                    </h3>
+
+                    <p class="student-role">
+                        Data Analyst
+                    </p>
+
+
+                    <div class="student-meta">
+
+                        <span>
+
+                            <i class="fa-solid fa-building"></i>
+
+                            InsightWorks
+
+                        </span>
+
+
+                        <strong>
+                            Placed
+                        </strong>
+
+                    </div>
+
+
+                    <small>
+                        Data Analytics & Power BI
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 5 -->
+
+            <div class="success-box">
+
+                <div class="review-top">
+
+                    <div class="stars">
+
+                        ★★★★★
+
+                        <span>
+                            5.0
+                        </span>
+
+                    </div>
+
+
+                    <span class="verified">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Verified
+
+                    </span>
+
+                </div>
+
+
+                <div class="quote-icon">
+                    “
+                </div>
+
+
+                <p class="review">
+
+                    The UI/UX program gave me practical experience from
+                    research to final prototype. Building projects for
+                    my portfolio gave me strong examples to discuss
+                    during interviews.
+
+                </p>
+
+
+                <div class="student-details">
+
+                    <h3>
+                        Priya Mehta
+                    </h3>
+
+                    <p class="student-role">
+                        Junior UI/UX Designer
+                    </p>
+
+
+                    <div class="student-meta">
+
+                        <span>
+
+                            <i class="fa-solid fa-building"></i>
+
+                            PixelCraft Studio
+
+                        </span>
+
+
+                        <strong>
+                            Placed
+                        </strong>
+
+                    </div>
+
+
+                    <small>
+                        UI/UX Design
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 6 -->
+
+            <div class="success-box">
+
+                <div class="review-top">
+
+                    <div class="stars">
+
+                        ★★★★½
+
+                        <span>
+                            4.5
+                        </span>
+
+                    </div>
+
+
+                    <span class="verified">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Verified
+
+                    </span>
+
+                </div>
+
+
+                <div class="quote-icon">
+                    “
+                </div>
+
+
+                <p class="review">
+
+                    I had studied Python before but struggled to connect
+                    it with real projects. The practical sessions helped
+                    me understand data cleaning, visualization and
+                    machine learning.
+
+                </p>
+
+
+                <div class="student-details">
+
+                    <h3>
+                        Rohit Agarwal
+                    </h3>
+
+                    <p class="student-role">
+                        Python Data Associate
+                    </p>
+
+
+                    <div class="student-meta">
+
+                        <span>
+
+                            <i class="fa-solid fa-building"></i>
+
+                            DataBridge Labs
+
+                        </span>
+
+
+                        <strong>
+                            Placed
+                        </strong>
+
+                    </div>
+
+
+                    <small>
+                        Data Science with Python
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 7 -->
+
+            <div class="success-box">
+
+                <div class="review-top">
+
+                    <div class="stars">
+
+                        ★★★★★
+
+                        <span>
+                            5.0
+                        </span>
+
+                    </div>
+
+
+                    <span class="verified">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Verified
+
+                    </span>
+
+                </div>
+
+
+                <div class="quote-icon">
+                    “
+                </div>
+
+
+                <p class="review">
+
+                    I was looking for structured Java training with
+                    project experience. The combination of Java,
+                    Spring Boot and SQL helped me become more confident
+                    with backend development.
+
+                </p>
+
+
+                <div class="student-details">
+
+                    <h3>
+                        Akash Joshi
+                    </h3>
+
+                    <p class="student-role">
+                        Java Developer
+                    </p>
+
+
+                    <div class="student-meta">
+
+                        <span>
+
+                            <i class="fa-solid fa-building"></i>
+
+                            CodeAxis Technologies
+
+                        </span>
+
+
+                        <strong>
+                            Placed
+                        </strong>
+
+                    </div>
+
+
+                    <small>
+                        Java & Spring Boot
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 8 -->
+
+            <div class="success-box">
+
+                <div class="review-top">
+
+                    <div class="stars">
+
+                        ★★★★★
+
+                        <span>
+                            5.0
+                        </span>
+
+                    </div>
+
+
+                    <span class="verified">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Verified
+
+                    </span>
+
+                </div>
+
+
+                <div class="quote-icon">
+                    “
+                </div>
+
+
+                <p class="review">
+
+                    Resume guidance, project reviews and mock interviews
+                    helped me improve significantly. I felt much more
+                    prepared when I started attending actual technical
+                    interviews.
+
+                </p>
+
+
+                <div class="student-details">
+
+                    <h3>
+                        Neha Deshmukh
+                    </h3>
+
+                    <p class="student-role">
+                        Software Engineer
+                    </p>
+
+
+                    <div class="student-meta">
+
+                        <span>
+
+                            <i class="fa-solid fa-building"></i>
+
+                            NextGen Systems
+
+                        </span>
+
+
+                        <strong>
+                            Placed
+                        </strong>
+
+                    </div>
+
+
+                    <small>
+                        Software Development
+                    </small>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PARTNERS SECTION
+========================================================= -->
+
+<section class="partners-section">
+
+    <h2>
+        Our Students Placed in Top Companies
+    </h2>
+
+
+    <div class="partners-slider">
+
+        <div class="slide-track">
+
+
+            <!-- 15 LOGOS -->
+
+            <div class="partner-item">
+
+                <img
+                    src="https://i.pinimg.com/1200x/b0/de/60/b0de6006aee3fce314fc2575019d0b0d.jpg"
+                    alt="Company Logo"
+                >
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="https://i.pinimg.com/736x/d2/32/5e/d2325e4ea3a16ec25ff35603c8003a5f.jpg"
+                    alt="Company Logo"
+                >
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="https://i.pinimg.com/1200x/06/1d/ca/061dcafd76f4d6ff18db3e18fe8ca316.jpg"
+                    alt="Company Logo"
+                >
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="https://i.pinimg.com/736x/09/ac/64/09ac6418962ad0d21280f9e3321e0d01.jpg"
+                    alt="Company Logo"
+                >
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="https://i.pinimg.com/736x/cc/06/71/cc06711bdcf55b7352e5e74f0d8e2d41.jpg"
+                    alt="Company Logo"
+                >
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="https://i.pinimg.com/1200x/97/83/22/9783222e98b0d5141519b41e7203ff9a.jpg"
+                    alt="Company Logo"
+                >
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="https://i.pinimg.com/1200x/7c/b5/df/7cb5dfa2786c33a3411f252313aeefb3.jpg"
+                    alt="Company Logo"
+                >
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="https://i.pinimg.com/736x/c8/dc/e1/c8dce16663e5e2d215231332e9e6287e.jpg"
+                    alt="Company Logo"
+                >
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="https://i.pinimg.com/1200x/fd/b3/b9/fdb3b9b6bb84c009ed500547542e9333.jpg"
+                    alt="Company Logo"
+                >
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="https://i.pinimg.com/736x/2d/bb/0f/2dbb0ff968953a734143faa96e1ddff1.jpg"
+                    alt="Company Logo"
+                >
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="https://i.pinimg.com/1200x/4d/c5/74/4dc5742211ef451e37634edfa2e6101a.jpg"
+                    alt="Company Logo"
+                >
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="https://i.pinimg.com/1200x/ed/96/16/ed96168483f887cbbfa92bac32cf776f.jpg"
+                    alt="Company Logo"
+                >
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="https://i.pinimg.com/1200x/a0/e6/91/a0e6913a3473cc42c7f0212b65399d46.jpg"
+                    alt="Company Logo"
+                >
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="https://i.pinimg.com/1200x/f0/9f/60/f09f6008338a2e8e41249c0421dbf2ee.jpg"
+                    alt="Company Logo"
+                >
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="https://i.pinimg.com/736x/63/5b/1d/635b1da90ddb7165cf167ca61e38f85f.jpg"
+                    alt="Company Logo"
+                >
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PORTFOLIO / FEATURED PROJECTS SECTION
+========================================================= -->
+
+<section class="featured-projects-column">
+    <div class="fp-column-wrapper">
+      <h2 class="fp-title">Featured Projects</h2>
+      <p class="fp-subtitle">Real projects, real results, real impact on businesses</p>
+
+      <div class="fp-column-grid">
+        <!-- CARD 1 -->
+        <div class="fp-card-column">
+          <h5>Web Development</h5>
+          <h3>E-commerce Platform for Fashion Retailer</h3>
+          <span class="client">Client: Fashion Boutique Pvt Ltd</span>
+          <p class="desc">
+            Built a complete e-commerce solution with inventory management, payment gateway integration, and admin
+            dashboard.
+          </p>
+          <div class="tech">
+            <span>Next.js</span><span>Node.js</span><span>MongoDB</span><span>Stripe</span>
+          </div>
+          <div class="results">
+            <p><i>✔</i> 300% increase in online sales</p>
+            <p><i>✔</i> Reduced cart abandonment by 45%</p>
+            <p><i>✔</i> Improved page load time by 60%</p>
+          </div>
+          <div class="stars" data-stars="5"></div>
+          <p class="testimonial">
+            "Mentore Solution delivered beyond our expectations. The platform is fast, secure, and our customers love
+            it!"
+          </p>
+          <span class="author">– Fashion Boutique Pvt Ltd</span>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="fp-card-column">
+          <h5>Cloud & DevOps</h5>
+          <h3>Cloud Migration for Healthcare Provider</h3>
+          <span class="client">Client: HealthCare Solutions</span>
+          <p class="desc">
+            Migrated legacy infrastructure to AWS cloud with automated CI/CD pipelines and monitoring.
+          </p>
+          <div class="tech">
+            <span>AWS</span><span>Docker</span><span>Kubernetes</span><span>Jenkins</span>
+          </div>
+          <div class="results">
+            <p><i>✔</i> 40% reduction in infrastructure costs</p>
+            <p><i>✔</i> 99.9% uptime achieved</p>
+            <p><i>✔</i> Deployment reduced from days to hours</p>
+          </div>
+          <div class="stars" data-stars="5"></div>
+          <p class="testimonial">
+            "The migration was seamless. Our operations are now more efficient and cost-effective."
+          </p>
+          <span class="author">– HealthCare Solutions</span>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="fp-card-column">
+          <h5>Custom Software</h5>
+          <h3>CRM System for Real Estate Company</h3>
+          <span class="client">Client: Prime Properties</span>
+          <p class="desc">
+            Custom CRM with lead management, property listings, and automated follow-up system.
+          </p>
+          <div class="tech">
+            <span>React</span><span>Python</span><span>PostgreSQL</span><span>Redis</span>
+          </div>
+          <div class="results">
+            <p><i>✔</i> Lead conversion increased by 55%</p>
+            <p><i>✔</i> Sales productivity up by 70%</p>
+            <p><i>✔</i> Customer satisfaction improved</p>
+          </div>
+          <div class="stars" data-stars="5"></div>
+          <p class="testimonial">
+            "This CRM transformed how we manage our clients and properties."
+          </p>
+          <span class="author">– Prime Properties</span>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="fp-card-column">
+          <h5>Mobile Development</h5>
+          <h3>Mobile App for Food Delivery Service</h3>
+          <span class="client">Client: QuickBite Delivery</span>
+          <p class="desc">
+            Cross-platform app with real-time tracking, payment integration, and ratings.
+          </p>
+          <div class="tech">
+            <span>React Native</span><span>Firebase</span><span>Google Maps API</span>
+          </div>
+          <div class="results">
+            <p><i>✔</i> 10,000+ downloads in first month</p>
+            <p><i>✔</i> 4.8 star app rating</p>
+            <p><i>✔</i> Processing time reduced by 50%</p>
+          </div>
+          <div class="stars" data-stars="5"></div>
+          <p class="testimonial">
+            "The app is intuitive and customers love the real-time tracking."
+          </p>
+          <span class="author">– QuickBite Delivery</span>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="fp-card-column">
+          <h5>Digital Marketing</h5>
+          <h3>Digital Marketing Campaign for EdTech Startup</h3>
+          <span class="client">Client: LearnHub Online</span>
+          <p class="desc">
+            SEO and PPC campaigns to increase brand visibility and enrollments.
+          </p>
+          <div class="tech">
+            <span>Google Ads</span><span>Facebook Ads</span><span>SEO Tools</span><span>Analytics</span>
+          </div>
+          <div class="results">
+            <p><i>✔</i> 250% organic traffic growth</p>
+            <p><i>✔</i> CPA reduced by 35%</p>
+            <p><i>✔</i> 500+ new enrollments</p>
+          </div>
+          <div class="stars" data-stars="5"></div>
+          <p class="testimonial">
+            "Our online presence has grown tremendously with excellent ROI."
+          </p>
+          <span class="author">– LearnHub Online</span>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="fp-card-column">
+          <h5>Enterprise Software</h5>
+          <h3>ERP System for Manufacturing Company</h3>
+          <span class="client">Client: Industrial Solutions Ltd</span>
+          <p class="desc">
+            ERP for inventory, production, sales, and financial management.
+          </p>
+          <div class="tech">
+            <span>Java</span><span>Spring Boot</span><span>MySQL</span><span>Angular</span>
+          </div>
+          <div class="results">
+            <p><i>✔</i> Inventory accuracy at 98%</p>
+            <p><i>✔</i> Production efficiency up 40%</p>
+            <p><i>✔</i> Real-time reporting enabled</p>
+          </div>
+          <div class="stars" data-stars="5"></div>
+          <p class="testimonial">
+            "The ERP streamlined our entire operation. Worth every penny!"
+          </p>
+          <span class="author">– Industrial Solutions Ltd</span>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<!-- =========================================================
+     TRANSFORM SECTION
+========================================================= -->
+
+<section class="transform-section">
+
+    <div class="transform-content">
+
+        <h2>
+            Ready to Transform Your Career or Business?
+        </h2>
+
+
+        <p>
+
+            Unlock industry-recognized training, personalized guidance, and real-world skills designed
+            to accelerate your professional growth. Whether you want to upskill, switch careers, or
+            elevate your business capabilities, our expert-led programs will help you achieve your goals.
+
+        </p>
+
+
+        <div class="transform-buttons">
+
+            <a
+                href="tel:+919881922922"
+                class="btn primary-btn"
+            >
+                Call Now: +91 9881922922 
+            </a>
+
+
+            <a
+                href="#"
+                class="btn secondary-btn"
+            >
+                Get Free Career Consultation
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER SECTION
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <!-- Column 1: LOGO + About -->
+
+        <div class="footer-col">
+
+
+            <!-- YOUR LOGO TEXT -->
+
+            <div class="footer-logo">
+
+                <a href="/Image/logo.png"></a>
+
+            </div>
+
+
+            <p class="footer-about">
+
+                We provide industry-focused training programs designed to help students and professionals
+                enhance their skills and build successful careers.
+
+            </p>
+
+
+            <!-- SOCIAL ICONS -->
+
+            <div class="footer-social">
+
+                <a
+                    href="#"
+                    class="social-link"
+                >
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+
+                <a
+                    href="#"
+                    class="social-link"
+                >
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+
+                <a
+                    href="#"
+                    class="social-link"
+                >
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+
+                <a
+                    href="#"
+                    class="social-link"
+                >
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Column 2: Quick Links -->
+
+        <div class="footer-col">
+
+            <h3>
+                Quick Links
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    <a href="./index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./Pages/about.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./Pages/training.html">
+                        Training Programs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./Pages/itservices.html">
+                        Our Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="./Pages/contact.html">
+                        Contact Us
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- Column 3: Popular Courses -->
+
+        <div class="footer-col">
+
+            <h3>
+                Popular Courses
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        Full Stack Development
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        DevOps & Cloud Computing
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Digital Marketing
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Data Analytics & Power BI
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- Column 4: Contact -->
+
+        <div class="footer-col">
+
+            <h3>
+                Contact Us
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    Phone: +91 9881922922
+                </li>
+
+                <li>
+                    Email: mentoresolution@gmail.com
+                </li>
+
+                <li>
+                    Address: Karve Nagar, Pune
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2025 Mentore Solution. All Rights Reserved
+        </p>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FLOATING COMBO BUTTON
+    ====================================================== -->
+
+    <div class="floating-btn">
+
+        <button class="main-btn">
+
+            <i class="fas fa-comment-dots"></i>
+
+        </button>
+
+
+        <div class="child-btns">
+
+            <a
+                href="https://wa.me/919876543210"
+                target="_blank"
+                class="child-btn whatsapp"
+            >
+
+                <i class="fab fa-whatsapp"></i>
+
+                WhatsApp
+
+            </a>
+
+
+            <a
+                href="./contact.html"
+                class="child-btn contact"
+            >
+
+                <i class="fas fa-envelope"></i>
+
+                Contact
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+</footer>
+
+
+
+<!-- =========================================================
+     MOBILE JOB APPLICATION POPUP
+     
+     ADDED ONLY FOR THE NEW FUNCTIONALITY
+========================================================= -->
+
+<!-- =====================================================
+     MOBILE JOB POPUP
+===================================================== -->
+
+<div
+    id="jobPopup"
+    class="job-popup"
+    aria-hidden="true"
+>
+
+    <!-- CLOSE BUTTON -->
+    <button
+        type="button"
+        id="jobClose"
+        class="job-close"
+        aria-label="Close job popup"
+    >
+        ×
+    </button>
+
+    <!-- JOB BUTTON -->
+   <a
+    href="#"
+    id="jobButton"
+    class="job-button"
+    aria-label="Get Me a Job"
+>
+    <svg
+        class="job-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+    >
+        <path
+            d="M20 11.5C20 15.64 16.42 19 12 19C10.73 19 9.53 18.72 8.48 18.22L4 20L5.42 16.05C4.53 14.81 4 13.22 4 11.5C4 7.36 7.58 4 12 4C16.42 4 20 7.36 20 11.5Z"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        />
+
+        <path
+            d="M8 11.5H8.01"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+        />
+
+        <path
+            d="M12 11.5H12.01"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+        />
+
+        <path
+            d="M16 11.5H16.01"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+        />
+    </svg>
+
+    <span class="job-text">
+        Get Me a Job
+    </span>
+</a>
+
+</div>
+
+
+
+<!-- =========================================================
+     EXISTING JAVASCRIPT
+========================================================= -->
+
+<script src="/Script/Script.js"></script>
+<script src="/Script/Itservices.js"></script>
+
+
+
+</body>
+
+</html>
+```

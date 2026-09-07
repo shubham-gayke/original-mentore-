@@ -1,0 +1,312 @@
+/* =====================================================
+   MOBILE GET ME A JOB POPUP
+   ONLY MOBILE VIEW
+===================================================== */
+
+.mobile-job-popup {
+    position: fixed;
+
+    right: 14px;
+    bottom: 105px;
+
+    width: 265px;
+
+    z-index: 99999;
+
+    display: none;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translate3d(40px, 25px, 0) scale(0.94);
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s cubic-bezier(.22, 1, .36, 1),
+        visibility 0.45s ease;
+
+    will-change: transform, opacity;
+}
+
+
+/* SHOW POPUP */
+
+.mobile-job-popup.show {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translate3d(0, 0, 0) scale(1);
+}
+
+
+/* MAIN LINK */
+
+.job-popup-link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    text-decoration: none;
+
+    color: #222;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.18),
+        0 3px 10px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* HOVER */
+
+.job-popup-link:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.22);
+}
+
+
+/* WHATSAPP ICON */
+
+.job-popup-icon {
+    flex: 0 0 43px;
+
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #25D366;
+
+    color: #ffffff;
+
+    font-size: 23px;
+
+    box-shadow:
+        0 5px 14px rgba(37, 211, 102, 0.28);
+}
+
+
+/* CONTENT */
+
+.job-popup-content {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.2;
+}
+
+
+/* SMALL TEXT */
+
+.job-popup-small {
+    font-size: 10px;
+
+    color: #777;
+
+    font-weight: 500;
+
+    margin-bottom: 3px;
+}
+
+
+/* TITLE */
+
+.job-popup-content strong {
+    font-size: 16px;
+
+    color: #222;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+
+/* ACTION */
+
+.job-popup-action {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    font-size: 10px;
+
+    color: #25a95a;
+
+    font-weight: 600;
+}
+
+
+.job-popup-action i {
+    font-size: 9px;
+
+    transition: transform 0.2s ease;
+}
+
+
+.job-popup-link:hover .job-popup-action i {
+    transform: translateX(3px);
+}
+
+
+/* CLOSE BUTTON */
+
+.job-popup-close {
+    position: absolute;
+
+    top: -7px;
+    right: -7px;
+
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 50%;
+
+    background: #333;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.2);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.job-popup-close:hover {
+    background: #111;
+
+    transform: scale(1.08);
+}
+
+
+/* =====================================================
+   MOBILE ONLY
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .mobile-job-popup {
+        display: block;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .mobile-job-popup {
+        right: 12px;
+        bottom: 92px;
+
+        width: 250px;
+    }
+
+    .job-popup-link {
+        padding: 13px 14px;
+
+        gap: 10px;
+
+        border-radius: 14px;
+    }
+
+    .job-popup-icon {
+        width: 40px;
+        height: 40px;
+
+        flex-basis: 40px;
+
+        font-size: 21px;
+    }
+
+    .job-popup-content strong {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .mobile-job-popup {
+        right: 10px;
+        bottom: 88px;
+
+        width: 230px;
+    }
+
+    .job-popup-link {
+        padding: 11px 12px;
+    }
+
+    .job-popup-icon {
+        width: 37px;
+        height: 37px;
+
+        flex-basis: 37px;
+
+        font-size: 19px;
+    }
+
+    .job-popup-content strong {
+        font-size: 14px;
+    }
+
+    .job-popup-action {
+        font-size: 9px;
+    }
+
+}
