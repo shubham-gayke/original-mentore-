@@ -1,7 +1,6 @@
 /* =========================================================
-   BACKGROUND MEDIA CONTROLLER
-   Plays: Video1 → Video2 → Video3 → Img1 → Img2 → Img3 → Img4 → loop
-   Audio: single MP3, looping, starts on first user interaction
+   HERO VIDEO PLAYER — SEQUENTIAL PLAYBACK
+   Plays videos one after another in a loop without overlap
 ========================================================= */
 
 (function () {
@@ -9,262 +8,114 @@
 
   document.addEventListener("DOMContentLoaded", function () {
 
-    /* =================================================
-       ELEMENTS
-    ================================================= */
+    var video = document.getElementById("heroVideo");
+    var muteBtn = document.getElementById("heroMuteBtn");
 
-    var video1 = document.getElementById("bgVideo1");
-    var video2 = document.getElementById("bgVideo2");
-    var video3 = document.getElementById("bgVideo3");
+    if (!video || !muteBtn) return;
 
-    var img1 = document.getElementById("bgImg1");
-    var img2 = document.getElementById("bgImg2");
-    var img3 = document.getElementById("bgImg3");
-    var img4 = document.getElementById("bgImg4");
+    var videoSources = [
+      "mentore home page videos/1 mentore intro 1.mp4",
+      "mentore home page videos/2 mentore services 2.mp4",
+      "mentore home page videos/3 why mentore 3.mp4"
+    ];
 
-    var audio = document.getElementById("bgAudio");
-    var muteBtn = document.getElementById("bgMuteBtn");
-
-    /* Exit if elements are missing */
-    if (!video1 || !video2 || !video3 || !img1 || !img2 || !img3 || !img4 || !audio || !muteBtn) {
-      return;
-    }
-
-    var videos = [video1, video2, video3];
-    var images = [img1, img2, img3, img4];
-    var allMedia = videos.concat(images);
-
-    var IMAGE_DISPLAY_TIME = 1500; /* ms per image */
-    var imageTimer = null;
-    var audioStarted = false;
-
+    var currentIndex = 0;
+    var isMuted = false;
+    var transitionTimeout = null;
 
     /* =================================================
-       HELPERS
-    ================================================= */
-
-    var activeMedia = null;
-
-    function hideAllMedia() {
-      for (var i = 0; i < allMedia.length; i++) {
-        allMedia[i].classList.remove("active");
-        allMedia[i].style.zIndex = "";
-      }
-      activeMedia = null;
-    }
-
-    function showMedia(el) {
-      if (activeMedia === el) return;
-      
-      el.style.zIndex = "2";
-      el.classList.add("active");
-
-      if (activeMedia) {
-        var previous = activeMedia;
-        previous.style.zIndex = "1";
-        setTimeout(function() {
-          if (previous !== activeMedia) {
-            previous.classList.remove("active");
-            previous.style.zIndex = "";
-          }
-        }, 800); // 0.8s transition
-      }
-
-      activeMedia = el;
-    }
-
-
-    /* =================================================
-       AUDIO — starts on first user click (autoplay policy)
-    ================================================= */
-
-    audio.muted = true;
-
-    function tryStartAudio() {
-      if (audioStarted) return;
-      audioStarted = true;
-
-      audio.muted = false;
-      audio.volume = 1;
-      audio.play().catch(function () {
-        /* Browser still blocked — keep muted state */
-        audio.muted = true;
-        audioStarted = false;
-        updateMuteIcon();
-      });
-
-      updateMuteIcon();
-      document.removeEventListener("click", tryStartAudio);
-      document.removeEventListener("touchstart", tryStartAudio);
-    }
-
-    document.addEventListener("click", tryStartAudio);
-    document.addEventListener("touchstart", tryStartAudio, { passive: true });
-
-
-    /* =================================================
-       MUTE / UNMUTE BUTTON
+       SYNC MUTE STATE
     ================================================= */
 
     function updateMuteIcon() {
       var icon = muteBtn.querySelector("i");
       if (!icon) return;
 
-      if (audio.muted) {
+      if (isMuted) {
         icon.className = "fa-solid fa-volume-xmark";
-        muteBtn.setAttribute("aria-label", "Unmute background audio");
-        muteBtn.setAttribute("title", "Unmute background audio");
+        muteBtn.setAttribute("aria-label", "Unmute video audio");
+        muteBtn.setAttribute("title", "Unmute video audio");
       } else {
         icon.className = "fa-solid fa-volume-high";
-        muteBtn.setAttribute("aria-label", "Mute background audio");
-        muteBtn.setAttribute("title", "Mute background audio");
+        muteBtn.setAttribute("aria-label", "Mute video audio");
+        muteBtn.setAttribute("title", "Mute video audio");
       }
     }
 
     muteBtn.addEventListener("click", function (e) {
-      e.stopPropagation(); /* prevent triggering tryStartAudio again */
-
-      if (!audioStarted) {
-        /* First click on mute button also starts the audio */
-        audioStarted = true;
-        audio.muted = false;
-        audio.volume = 1;
-        audio.play().catch(function(){});
-      } else {
-        audio.muted = !audio.muted;
-      }
-
+      e.stopPropagation();
+      isMuted = !isMuted;
+      video.muted = isMuted;
       updateMuteIcon();
     });
 
 
     /* =================================================
-       VIDEO PLAYBACK
+       PLAY NEXT VIDEO
     ================================================= */
 
-    function playVideo(videoEl, onEnd) {
-      videoEl.preload = "auto";
-      videoEl.muted = true;
-      videoEl.currentTime = 0;
-
-      var playPromise = videoEl.play();
-
-      function onReadyToRender() {
-        showMedia(videoEl);
+    function playNextVideo() {
+      currentIndex++;
+      if (currentIndex >= videoSources.length) {
+        currentIndex = 0;
       }
-
-      if (playPromise !== undefined) {
-        playPromise.then(function() {
-          if (videoEl.readyState >= 3) {
-            onReadyToRender();
-          } else {
-            var handlePlaying = function() {
-              videoEl.removeEventListener("playing", handlePlaying);
-              onReadyToRender();
-            };
-            videoEl.addEventListener("playing", handlePlaying);
-          }
-        }).catch(function () {
-          if (onEnd) onEnd();
+      
+      video.src = videoSources[currentIndex];
+      video.load();
+      video.muted = isMuted;
+      
+      var playP = video.play();
+      if (playP !== undefined) {
+        playP.catch(function () {
+          // If autoplay fails, force mute and try again
+          isMuted = true;
+          video.muted = true;
+          updateMuteIcon();
+          video.play().catch(function () {});
         });
-      } else {
-        onReadyToRender();
       }
-
-      function onEnded() {
-        videoEl.removeEventListener("ended", onEnded);
-        if (onEnd) onEnd();
-      }
-
-      videoEl.addEventListener("ended", onEnded);
     }
 
-
-    /* =================================================
-       IMAGE SLIDESHOW
-    ================================================= */
-
-    function showImageSequence(index, onComplete) {
-      if (index >= images.length) {
-        if (onComplete) onComplete();
-        return;
-      }
-
-      hideAllMedia();
-      showMedia(images[index]);
-
-      imageTimer = setTimeout(function () {
-        showImageSequence(index + 1, onComplete);
-      }, IMAGE_DISPLAY_TIME);
-    }
-
-
-    /* =================================================
-       MAIN SEQUENCE
-    ================================================= */
-
-    function startSequence() {
-      /* Preload video 2 and 3 when sequence starts */
-      video2.preload = "auto";
-
-      playVideo(video1, function () {
-        video3.preload = "auto";
-
-        playVideo(video2, function () {
-
-          playVideo(video3, function () {
-
-            showImageSequence(0, function () {
-              /* Loop — restart from the beginning */
-              startSequence();
-            });
-
-          });
-
-        });
-
-      });
-    }
+    // When the video ends, wait 1 second then play the next one
+    video.addEventListener("ended", function () {
+      if (transitionTimeout) clearTimeout(transitionTimeout);
+      transitionTimeout = setTimeout(function () {
+        playNextVideo();
+      }, 1000);
+    });
 
 
     /* =================================================
        START
     ================================================= */
 
-    startSequence();
-
-    /* Also start audio silently in the background
-       (will be heard on first user interaction) */
-    audio.play().catch(function () {
-      /* Expected: autoplay blocked until user interacts */
-    });
-
+    isMuted = false;
+    video.muted = false;
+    video.volume = 1;
     updateMuteIcon();
+
+    var startPromise = video.play();
+    if (startPromise !== undefined) {
+      startPromise.catch(function () {
+        /* Autoplay with audio blocked — fallback to muted */
+        isMuted = true;
+        video.muted = true;
+        updateMuteIcon();
+        video.play().catch(function () {});
+      });
+    }
 
 
     /* =================================================
-       CLEANUP ON PAGE HIDE
+       VISIBILITY CHANGE — pause/resume
     ================================================= */
 
     document.addEventListener("visibilitychange", function () {
       if (document.hidden) {
-        /* Pause videos when tab is hidden to save resources */
-        for (var i = 0; i < videos.length; i++) {
-          if (!videos[i].paused) {
-            videos[i].pause();
-          }
-        }
-        if (imageTimer) {
-          clearTimeout(imageTimer);
-        }
+        video.pause();
+        if (transitionTimeout) clearTimeout(transitionTimeout);
       } else {
-        /* Resume the active video when tab is visible again */
-        for (var j = 0; j < videos.length; j++) {
-          if (videos[j].classList.contains("active")) {
-            videos[j].play().catch(function () {});
-            break;
-          }
-        }
+        video.play().catch(function () {});
       }
     });
 

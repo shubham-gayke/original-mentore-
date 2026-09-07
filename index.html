@@ -22,101 +22,31 @@
 
 
 <!-- =========================================================
-     FULLSCREEN BACKGROUND MEDIA
+     HERO VIDEO SHOWCASE — Mentore Solution IT Services
 ========================================================= -->
 
-<div id="bg-media-wrapper">
+<section class="hero-video-section" id="heroVideoSection">
 
-    <!-- VIDEO 1 -->
+    <!-- SINGLE VIDEO PLAYER -->
     <video
-        id="bgVideo1"
-        class="bg-media-item active"
-        muted
+        id="heroVideo"
+        class="hero-video-player active"
         playsinline
         preload="auto"
-        src="bg IMG/first 7 sec .mp4"
+        src="mentore home page videos/1 mentore intro 1.mp4"
     ></video>
 
-    <!-- VIDEO 2 -->
-    <video
-        id="bgVideo2"
-        class="bg-media-item"
-        muted
-        playsinline
-        preload="none"
-        src="bg IMG/video1.5.mp4"
-    ></video>
-
-    <!-- VIDEO 3 -->
-    <video
-        id="bgVideo3"
-        class="bg-media-item"
-        muted
-        playsinline
-        preload="none"
-        src="bg IMG/video 2.mp4"
-    ></video>
-
-    <!-- IMAGE 1 -->
-    <img
-        id="bgImg1"
-        class="bg-media-item"
-        src="bg IMG/1 IMG.png"
-        alt="Background 1"
-        loading="lazy"
+    <!-- MUTE / UNMUTE BUTTON -->
+    <button
+        id="heroMuteBtn"
+        class="hero-mute-btn"
+        aria-label="Mute video audio"
+        title="Mute video audio"
     >
+        <i class="fa-solid fa-volume-high"></i>
+    </button>
 
-    <!-- IMAGE 2 -->
-    <img
-        id="bgImg2"
-        class="bg-media-item"
-        src="bg IMG/2 IMG.png"
-        alt="Background 2"
-        loading="lazy"
-    >
-
-    <!-- IMAGE 3 -->
-    <img
-        id="bgImg3"
-        class="bg-media-item"
-        src="bg IMG/3 IMG.png"
-        alt="Background 3"
-        loading="lazy"
-    >
-
-    <!-- IMAGE 4 -->
-    <img
-        id="bgImg4"
-        class="bg-media-item"
-        src="bg IMG/4 IMG.png"
-        alt="Background 4"
-        loading="lazy"
-    >
-
-    <!-- DARK OVERLAY -->
-    <div id="bg-media-overlay"></div>
-
-</div>
-
-
-<!-- BACKGROUND AUDIO -->
-<audio
-    id="bgAudio"
-    src="bg IMG/english only.mp3"
-    loop
-    preload="auto"
-></audio>
-
-
-<!-- MUTE / UNMUTE BUTTON -->
-<button
-    id="bgMuteBtn"
-    class="bg-mute-btn"
-    aria-label="Unmute background audio"
-    title="Unmute background audio"
->
-    <i class="fa-solid fa-volume-xmark"></i>
-</button>
+</section>
 
 
 <!-- =========================================================
@@ -651,6 +581,193 @@
 
     </div>
 </section>
+
+<!-- =========================================================
+     TRAINING & PLACEMENT SHOWCASE SECTION
+========================================================= -->
+
+<section class="home-training-showcase">
+    <div class="home-training-header">
+        <h2>Empowering Careers Through Training & Placement</h2>
+        <p>We don't just provide software solutions—we run dedicated programs to help students and professionals master industry-ready skills and secure top placements.</p>
+    </div>
+
+    <div class="training-showcase-container">
+        <!-- VIDEO 1 -->
+        <video id="homeBgVideo1" class="home-bg-media-item active" muted playsinline preload="auto" src="bg IMG/first 7 sec .mp4"></video>
+        <!-- VIDEO 2 -->
+        <video id="homeBgVideo2" class="home-bg-media-item" muted playsinline preload="none" src="bg IMG/video1.5.mp4"></video>
+        <!-- VIDEO 3 -->
+        <video id="homeBgVideo3" class="home-bg-media-item" muted playsinline preload="none" src="bg IMG/video 2.mp4"></video>
+
+        <!-- IMAGE 1 -->
+        <img id="homeBgImg1" class="home-bg-media-item" src="bg IMG/1 IMG.png" alt="Training 1" loading="lazy">
+        <!-- IMAGE 2 -->
+        <img id="homeBgImg2" class="home-bg-media-item" src="bg IMG/2 IMG.png" alt="Training 2" loading="lazy">
+        <!-- IMAGE 3 -->
+        <img id="homeBgImg3" class="home-bg-media-item" src="bg IMG/3 IMG.png" alt="Training 3" loading="lazy">
+        <!-- IMAGE 4 -->
+        <img id="homeBgImg4" class="home-bg-media-item" src="bg IMG/4 IMG.png" alt="Training 4" loading="lazy">
+
+        <!-- OVERLAY -->
+        <div class="home-bg-media-overlay"></div>
+
+        <!-- MUTE BUTTON -->
+        <button id="homeBgMuteBtn" class="home-bg-mute-btn" aria-label="Unmute audio" title="Unmute audio">
+            <i class="fa-solid fa-volume-xmark"></i>
+        </button>
+    </div>
+    
+    <!-- BACKGROUND AUDIO -->
+    <audio id="homeBgAudio" src="bg IMG/english only.mp3" loop preload="auto"></audio>
+</section>
+
+<!-- TRAINING SHOWCASE CONTROLLER -->
+<script>
+(function () {
+  "use strict";
+  document.addEventListener("DOMContentLoaded", function () {
+
+    var video1 = document.getElementById("homeBgVideo1");
+    var video2 = document.getElementById("homeBgVideo2");
+    var video3 = document.getElementById("homeBgVideo3");
+    var img1 = document.getElementById("homeBgImg1");
+    var img2 = document.getElementById("homeBgImg2");
+    var img3 = document.getElementById("homeBgImg3");
+    var img4 = document.getElementById("homeBgImg4");
+    var audio = document.getElementById("homeBgAudio");
+    var muteBtn = document.getElementById("homeBgMuteBtn");
+
+    if (!video1 || !video2 || !video3 || !img1 || !img2 || !img3 || !img4 || !audio || !muteBtn) return;
+
+    var videos = [video1, video2, video3];
+    var images = [img1, img2, img3, img4];
+    var allMedia = videos.concat(images);
+    var IMAGE_DISPLAY_TIME = 1500;
+    var imageTimer = null;
+    var audioStarted = false;
+    var activeMedia = null;
+
+    function hideAllMedia() {
+      for (var i = 0; i < allMedia.length; i++) {
+        allMedia[i].classList.remove("active");
+        allMedia[i].style.zIndex = "";
+      }
+      activeMedia = null;
+    }
+
+    function showMedia(el) {
+      if (activeMedia === el) return;
+      el.style.zIndex = "2";
+      el.classList.add("active");
+      if (activeMedia) {
+        var prev = activeMedia;
+        prev.style.zIndex = "1";
+        setTimeout(function () {
+          if (prev !== activeMedia) {
+            prev.classList.remove("active");
+            prev.style.zIndex = "";
+          }
+        }, 800);
+      }
+      activeMedia = el;
+    }
+
+    /* AUDIO — starts on first user click */
+    audio.muted = true;
+    function tryStartAudio() {
+      if (audioStarted) return;
+      audioStarted = true;
+      audio.muted = false;
+      audio.volume = 1;
+      audio.play().catch(function () {
+        audio.muted = true;
+        audioStarted = false;
+        updateIcon();
+      });
+      updateIcon();
+      document.removeEventListener("click", tryStartAudio);
+      document.removeEventListener("touchstart", tryStartAudio);
+    }
+    document.addEventListener("click", tryStartAudio);
+    document.addEventListener("touchstart", tryStartAudio, { passive: true });
+
+    function updateIcon() {
+      var icon = muteBtn.querySelector("i");
+      if (!icon) return;
+      if (audio.muted) {
+        icon.className = "fa-solid fa-volume-xmark";
+        muteBtn.setAttribute("aria-label", "Unmute background audio");
+      } else {
+        icon.className = "fa-solid fa-volume-high";
+        muteBtn.setAttribute("aria-label", "Mute background audio");
+      }
+    }
+
+    muteBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      if (!audioStarted) {
+        audioStarted = true;
+        audio.muted = false;
+        audio.volume = 1;
+        audio.play().catch(function () {});
+      } else {
+        audio.muted = !audio.muted;
+      }
+      updateIcon();
+    });
+
+    function playVideo(videoEl, onEnd) {
+      videoEl.preload = "auto";
+      videoEl.muted = true;
+      videoEl.currentTime = 0;
+      var p = videoEl.play();
+      if (p !== undefined) {
+        p.then(function () { showMedia(videoEl); }).catch(function () { if (onEnd) onEnd(); });
+      } else {
+        showMedia(videoEl);
+      }
+      function onEnded() { videoEl.removeEventListener("ended", onEnded); if (onEnd) onEnd(); }
+      videoEl.addEventListener("ended", onEnded);
+    }
+
+    function showImageSequence(idx, done) {
+      if (idx >= images.length) { if (done) done(); return; }
+      hideAllMedia();
+      showMedia(images[idx]);
+      imageTimer = setTimeout(function () { showImageSequence(idx + 1, done); }, IMAGE_DISPLAY_TIME);
+    }
+
+    function startSequence() {
+      video2.preload = "auto";
+      playVideo(video1, function () {
+        video3.preload = "auto";
+        playVideo(video2, function () {
+          playVideo(video3, function () {
+            showImageSequence(0, function () { startSequence(); });
+          });
+        });
+      });
+    }
+
+    startSequence();
+    audio.play().catch(function () {});
+    updateIcon();
+
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) {
+        for (var i = 0; i < videos.length; i++) { if (!videos[i].paused) videos[i].pause(); }
+        if (imageTimer) clearTimeout(imageTimer);
+      } else {
+        for (var j = 0; j < videos.length; j++) {
+          if (videos[j].classList.contains("active")) { videos[j].play().catch(function () {}); break; }
+        }
+      }
+    });
+
+  });
+})();
+</script>
 
 
 

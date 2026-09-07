@@ -76,6 +76,68 @@
         </div>
     </section>
 
+    <!-- =========================================================
+         BACKGROUND MEDIA SHOWCASE (moved from homepage)
+    ========================================================= -->
+
+    <section class="training-media-showcase" id="trainingMediaShowcase">
+
+        <div class="training-media-wrapper" id="trainingMediaWrapper">
+
+            <!-- VIDEO 1 -->
+            <video
+                id="trnVideo1"
+                class="trn-media-item active"
+                muted
+                playsinline
+                preload="auto"
+                src="../bg IMG/first 7 sec.mp4"
+            ></video>
+
+            <!-- VIDEO 2 -->
+            <video
+                id="trnVideo2"
+                class="trn-media-item"
+                muted
+                playsinline
+                preload="none"
+                src="../bg IMG/video1.5.mp4"
+            ></video>
+
+            <!-- VIDEO 3 -->
+            <video
+                id="trnVideo3"
+                class="trn-media-item"
+                muted
+                playsinline
+                preload="none"
+                src="../bg IMG/video 2.mp4"
+            ></video>
+
+            <!-- IMAGE 1 -->
+            <img id="trnImg1" class="trn-media-item" src="../bg IMG/1 IMG.png" alt="Training Visual 1" loading="lazy">
+            <!-- IMAGE 2 -->
+            <img id="trnImg2" class="trn-media-item" src="../bg IMG/2 IMG.png" alt="Training Visual 2" loading="lazy">
+            <!-- IMAGE 3 -->
+            <img id="trnImg3" class="trn-media-item" src="../bg IMG/3 IMG.png" alt="Training Visual 3" loading="lazy">
+            <!-- IMAGE 4 -->
+            <img id="trnImg4" class="trn-media-item" src="../bg IMG/4 IMG.png" alt="Training Visual 4" loading="lazy">
+
+            <!-- DARK OVERLAY -->
+            <div class="trn-media-overlay"></div>
+
+        </div>
+
+        <!-- BACKGROUND AUDIO -->
+        <audio id="trnAudio" src="../bg IMG/english only.mp3" loop preload="auto"></audio>
+
+        <!-- MUTE / UNMUTE BUTTON -->
+        <button id="trnMuteBtn" class="trn-mute-btn" aria-label="Unmute background audio" title="Unmute background audio">
+            <i class="fa-solid fa-volume-xmark"></i>
+        </button>
+
+    </section>
+
     <!-- FILTER SECTION -->
     <section class="filter-section">
         <h2>Our Training Programs</h2>
@@ -966,6 +1028,153 @@
 
     <script src="/Script/Training.js"></script>
     <script src="/Script/Placement.js"></script>
+
+    <!-- TRAINING MEDIA SHOWCASE CONTROLLER -->
+    <script>
+    (function () {
+      "use strict";
+      document.addEventListener("DOMContentLoaded", function () {
+
+        var video1 = document.getElementById("trnVideo1");
+        var video2 = document.getElementById("trnVideo2");
+        var video3 = document.getElementById("trnVideo3");
+        var img1 = document.getElementById("trnImg1");
+        var img2 = document.getElementById("trnImg2");
+        var img3 = document.getElementById("trnImg3");
+        var img4 = document.getElementById("trnImg4");
+        var audio = document.getElementById("trnAudio");
+        var muteBtn = document.getElementById("trnMuteBtn");
+
+        if (!video1 || !video2 || !video3 || !img1 || !img2 || !img3 || !img4 || !audio || !muteBtn) return;
+
+        var videos = [video1, video2, video3];
+        var images = [img1, img2, img3, img4];
+        var allMedia = videos.concat(images);
+        var IMAGE_DISPLAY_TIME = 1500;
+        var imageTimer = null;
+        var audioStarted = false;
+        var activeMedia = null;
+
+        function hideAllMedia() {
+          for (var i = 0; i < allMedia.length; i++) {
+            allMedia[i].classList.remove("active");
+            allMedia[i].style.zIndex = "";
+          }
+          activeMedia = null;
+        }
+
+        function showMedia(el) {
+          if (activeMedia === el) return;
+          el.style.zIndex = "2";
+          el.classList.add("active");
+          if (activeMedia) {
+            var prev = activeMedia;
+            prev.style.zIndex = "1";
+            setTimeout(function () {
+              if (prev !== activeMedia) {
+                prev.classList.remove("active");
+                prev.style.zIndex = "";
+              }
+            }, 800);
+          }
+          activeMedia = el;
+        }
+
+        /* AUDIO — starts on first user click */
+        audio.muted = true;
+        function tryStartAudio() {
+          if (audioStarted) return;
+          audioStarted = true;
+          audio.muted = false;
+          audio.volume = 1;
+          audio.play().catch(function () {
+            audio.muted = true;
+            audioStarted = false;
+            updateIcon();
+          });
+          updateIcon();
+          document.removeEventListener("click", tryStartAudio);
+          document.removeEventListener("touchstart", tryStartAudio);
+        }
+        document.addEventListener("click", tryStartAudio);
+        document.addEventListener("touchstart", tryStartAudio, { passive: true });
+
+        function updateIcon() {
+          var icon = muteBtn.querySelector("i");
+          if (!icon) return;
+          if (audio.muted) {
+            icon.className = "fa-solid fa-volume-xmark";
+            muteBtn.setAttribute("aria-label", "Unmute background audio");
+          } else {
+            icon.className = "fa-solid fa-volume-high";
+            muteBtn.setAttribute("aria-label", "Mute background audio");
+          }
+        }
+
+        muteBtn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          if (!audioStarted) {
+            audioStarted = true;
+            audio.muted = false;
+            audio.volume = 1;
+            audio.play().catch(function () {});
+          } else {
+            audio.muted = !audio.muted;
+          }
+          updateIcon();
+        });
+
+        function playVideo(videoEl, onEnd) {
+          videoEl.preload = "auto";
+          videoEl.muted = true;
+          videoEl.currentTime = 0;
+          var p = videoEl.play();
+          if (p !== undefined) {
+            p.then(function () { showMedia(videoEl); }).catch(function () { if (onEnd) onEnd(); });
+          } else {
+            showMedia(videoEl);
+          }
+          function onEnded() { videoEl.removeEventListener("ended", onEnded); if (onEnd) onEnd(); }
+          videoEl.addEventListener("ended", onEnded);
+        }
+
+        function showImageSequence(idx, done) {
+          if (idx >= images.length) { if (done) done(); return; }
+          hideAllMedia();
+          showMedia(images[idx]);
+          imageTimer = setTimeout(function () { showImageSequence(idx + 1, done); }, IMAGE_DISPLAY_TIME);
+        }
+
+        function startSequence() {
+          video2.preload = "auto";
+          playVideo(video1, function () {
+            video3.preload = "auto";
+            playVideo(video2, function () {
+              playVideo(video3, function () {
+                showImageSequence(0, function () { startSequence(); });
+              });
+            });
+          });
+        }
+
+        startSequence();
+        audio.play().catch(function () {});
+        updateIcon();
+
+        document.addEventListener("visibilitychange", function () {
+          if (document.hidden) {
+            for (var i = 0; i < videos.length; i++) { if (!videos[i].paused) videos[i].pause(); }
+            if (imageTimer) clearTimeout(imageTimer);
+          } else {
+            for (var j = 0; j < videos.length; j++) {
+              if (videos[j].classList.contains("active")) { videos[j].play().catch(function () {}); break; }
+            }
+          }
+        });
+
+      });
+    })();
+    </script>
 </body>
 
 </html>
