@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT Services - Mentore Solution</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Style/Itservices.css">
+    <link rel="stylesheet" href="/Style/three-experience.css">
 </head>
-<link rel="stylesheet" href="/Style/Itservices.css">
 
 <body>
+    <!-- THREE.JS GLOBAL AMBIENT BACKGROUND -->
+    <div id="threejs-container">
+        <canvas id="threejs-ambient-canvas"></canvas>
+    </div>
     <!-- NAVBAR -->
     <header class="navbar">
         <div class="nav-container">
@@ -46,9 +51,9 @@
         </ul>
     </header>
     <section class="it-services">
-    <span class="hero-particle p1" aria-hidden="true"></span>
-    <span class="hero-particle p2" aria-hidden="true"></span>
-    <span class="hero-particle p3" aria-hidden="true"></span>
+        <span class="hero-particle p1" aria-hidden="true"></span>
+        <span class="hero-particle p2" aria-hidden="true"></span>
+        <span class="hero-particle p3" aria-hidden="true"></span>
         <div class="it-container">
 
             <div class="small-heading">Professional IT Services</div>
@@ -462,7 +467,11 @@
 
 
 
+    <!-- THREE.JS AMBIENT EXPERIENCE & 3D INTERACTION ENGINE -->
+    <script src="../Script/three.min.js"></script>
+    <script src="../Script/three-scene.js"></script>
+    <script src="../Script/three-effects.js"></script>
+    <script src="/Script/Itservices.js"></script>
 </body>
-<script src="/Script/Itservices.js"></script>
 
 </html>

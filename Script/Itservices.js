@@ -7,84 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        NAVBAR SCROLL
-       Existing navbar behavior preserved
+       (Removed: Now handled in Script.js to avoid duplicates)
     ===================================================== */
-    const navbar = document.querySelector(".navbar");
-
-    const updateNavbar = () => {
-        if (!navbar) return;
-
-        if (window.scrollY > 40) {
-            navbar.classList.add("scrolled");
-        } else {
-            navbar.classList.remove("scrolled");
-        }
-    };
-
-    updateNavbar();
-    window.addEventListener("scroll", updateNavbar, { passive: true });
-
 
     /* =====================================================
        MOBILE MENU
-       Existing mobile menu behavior preserved
+       (Removed: Now handled in Script.js to avoid duplicates)
     ===================================================== */
-    const hamburger = document.getElementById("hamburger");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    if (hamburger && mobileMenu) {
-        hamburger.setAttribute("role", "button");
-        hamburger.setAttribute("tabindex", "0");
-        hamburger.setAttribute("aria-label", "Open navigation menu");
-        hamburger.setAttribute("aria-expanded", "false");
-
-        const toggleMobileMenu = (event) => {
-            if (event) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-
-            const isOpen = mobileMenu.classList.toggle("active");
-            hamburger.classList.toggle("active", isOpen);
-
-            hamburger.setAttribute(
-                "aria-expanded",
-                isOpen ? "true" : "false"
-            );
-
-            hamburger.setAttribute(
-                "aria-label",
-                isOpen ? "Close navigation menu" : "Open navigation menu"
-            );
-        };
-
-        hamburger.addEventListener("click", toggleMobileMenu);
-
-        hamburger.addEventListener("keydown", (event) => {
-            if (event.key === "Enter" || event.key === " ") {
-                toggleMobileMenu(event);
-            }
-        });
-
-        mobileMenu.querySelectorAll("a").forEach((link) => {
-            link.addEventListener("click", () => {
-                mobileMenu.classList.remove("active");
-                hamburger.classList.remove("active");
-                hamburger.setAttribute("aria-expanded", "false");
-                hamburger.setAttribute("aria-label", "Open navigation menu");
-            });
-        });
-
-        // Close menu when resizing back to desktop.
-        window.addEventListener("resize", () => {
-            if (window.innerWidth > 1000) {
-                mobileMenu.classList.remove("active");
-                hamburger.classList.remove("active");
-                hamburger.setAttribute("aria-expanded", "false");
-                hamburger.setAttribute("aria-label", "Open navigation menu");
-            }
-        });
-    }
 
 
     /* =====================================================
@@ -188,23 +117,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        FLOATING CONTACT BUTTON
-       Existing functionality preserved
+       (Removed: Now handled in Script.js to avoid duplicates)
     ===================================================== */
-    const floatingBtn = document.querySelector(".floating-btn");
-    const mainBtn = floatingBtn?.querySelector(".main-btn");
 
-    if (floatingBtn && mainBtn) {
-        mainBtn.addEventListener("click", (event) => {
-            event.stopPropagation();
-            floatingBtn.classList.toggle("active");
-        });
-
-        document.addEventListener("click", (event) => {
-            if (!floatingBtn.contains(event.target)) {
-                floatingBtn.classList.remove("active");
-            }
-        });
-    }
 
 
     /* =====================================================

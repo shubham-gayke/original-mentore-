@@ -1,0 +1,355 @@
+/**
+ * Mentore Solution — Movable CSS Particles & Passing Flash Wave
+ * 100% Pure CSS Background Experience with custom solar palettes & sweeping flash waves
+ */
+
+/* =========================================================
+   1. BACKGROUND CONTAINER
+========================================================= */
+.pure-css-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* =========================================================
+   2. PASSING FLASH WAVE SYSTEM
+========================================================= */
+.flash-wave-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* High-Impact Passing Flash Wave Beam */
+.flash-wave-beam {
+    position: absolute;
+    top: -60%;
+    left: -60%;
+    width: 250%;
+    height: 250%;
+    background: linear-gradient(
+        130deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 235, 130, 0.12) 46%,
+        rgba(255, 255, 255, 0.45) 50%,
+        rgba(250, 204, 21, 0.25) 53%,
+        rgba(245, 158, 11, 0.08) 57%,
+        transparent 63%
+    );
+    transform: translate3d(-90%, -90%, 0) rotate(18deg);
+    animation: passFlashWaveBeam 7.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+    mix-blend-mode: screen;
+}
+
+/* Secondary Ambient Counter-Wave */
+.flash-wave-secondary {
+    position: absolute;
+    top: -60%;
+    right: -60%;
+    width: 220%;
+    height: 220%;
+    background: linear-gradient(
+        -55deg,
+        transparent 0%,
+        rgba(255, 240, 180, 0) 40%,
+        rgba(245, 180, 30, 0.14) 49%,
+        rgba(255, 255, 230, 0.30) 51%,
+        rgba(255, 215, 0, 0.12) 53%,
+        transparent 62%
+    );
+    transform: translate3d(70%, -70%, 0) rotate(-12deg);
+    animation: passFlashWaveSecondary 11s cubic-bezier(0.3, 1, 0.4, 1) infinite 3.5s;
+    mix-blend-mode: screen;
+}
+
+/* Radiant Radial Sun Flare Pulse */
+.flash-wave-pulse {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    width: 65vw;
+    height: 65vh;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(255, 230, 120, 0.22) 0%,
+        rgba(245, 160, 30, 0.08) 45%,
+        transparent 70%
+    );
+    filter: blur(45px);
+    animation: flashPulseBreathing 7s ease-in-out infinite alternate;
+}
+
+@keyframes passFlashWaveBeam {
+    0% {
+        transform: translate3d(-90%, -90%, 0) rotate(18deg);
+        opacity: 0;
+    }
+    12% {
+        opacity: 0.9;
+    }
+    45% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        transform: translate3d(85%, 85%, 0) rotate(18deg);
+        opacity: 0;
+    }
+}
+
+@keyframes passFlashWaveSecondary {
+    0% {
+        transform: translate3d(70%, -70%, 0) rotate(-12deg);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.85;
+    }
+    50% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate3d(-70%, 70%, 0) rotate(-12deg);
+        opacity: 0;
+    }
+}
+
+@keyframes flashPulseBreathing {
+    0% {
+        transform: scale(0.85);
+        opacity: 0.35;
+    }
+    50% {
+        transform: scale(1.18) translate(25px, -15px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0.92) translate(-15px, 20px);
+        opacity: 0.4;
+    }
+}
+
+/* =========================================================
+   3. MOVABLE CSS PARTICLES WITH CUSTOM PALETTE
+========================================================= */
+.movable-particles-field {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.movable-particle {
+    position: absolute;
+    border-radius: 50%;
+    will-change: transform, opacity;
+    mix-blend-mode: screen;
+}
+
+/* Custom Color Palettes */
+.movable-particle.solar-amber {
+    background: radial-gradient(circle, #fff7ed 15%, #f97316 65%, rgba(249, 115, 22, 0) 100%);
+    box-shadow: 0 0 14px rgba(249, 115, 22, 0.95), 0 0 28px rgba(251, 146, 60, 0.5);
+}
+
+.movable-particle.radiant-gold {
+    background: radial-gradient(circle, #fefce8 20%, #facc15 65%, rgba(250, 204, 21, 0) 100%);
+    box-shadow: 0 0 16px rgba(250, 204, 21, 0.95), 0 0 32px rgba(234, 179, 8, 0.65);
+}
+
+.movable-particle.champagne-pearl {
+    background: radial-gradient(circle, #ffffff 30%, #fef3c7 70%, rgba(254, 243, 199, 0) 100%);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 1), 0 0 32px rgba(253, 224, 71, 0.7);
+}
+
+.movable-particle.honey-topaz {
+    background: radial-gradient(circle, #fffbeb 20%, #d97706 70%, rgba(217, 119, 6, 0) 100%);
+    box-shadow: 0 0 12px rgba(217, 119, 6, 0.9), 0 0 22px rgba(245, 158, 11, 0.45);
+}
+
+.movable-particle.coral-rose {
+    background: radial-gradient(circle, #fff1f2 20%, #fb7185 70%, rgba(251, 113, 133, 0) 100%);
+    box-shadow: 0 0 14px rgba(251, 113, 133, 0.85), 0 0 24px rgba(244, 63, 94, 0.45);
+}
+
+/* Concentric Expanding Pulse Rings */
+.pulse-ring-dot {
+    position: absolute;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 215, 0, 0.75);
+    box-shadow: 0 0 14px rgba(255, 215, 0, 0.55), inset 0 0 10px rgba(255, 235, 150, 0.45);
+    animation: ringPulseExpand 5s cubic-bezier(0.2, 0.8, 0.3, 1) infinite;
+}
+
+@keyframes ringPulseExpand {
+    0% {
+        transform: scale(0.25);
+        opacity: 0.95;
+    }
+    60% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(2.4);
+        opacity: 0;
+    }
+}
+
+/* =========================================================
+   4. DYNAMIC MOVING KEYFRAME TRAJECTORIES
+========================================================= */
+
+/* Trajectory 1: Curved diagonal flight with harmonic sway */
+@keyframes floatPath1 {
+    0% {
+        transform: translate3d(0, 0, 0) scale(0.5);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.95;
+    }
+    45% {
+        transform: translate3d(55px, -160px, 0) scale(1.25);
+        opacity: 1;
+    }
+    75% {
+        transform: translate3d(110px, -320px, 0) scale(0.9);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate3d(150px, -460px, 0) scale(0.3);
+        opacity: 0;
+    }
+}
+
+/* Trajectory 2: Leftward rising wave drift */
+@keyframes floatPath2 {
+    0% {
+        transform: translate3d(0, 0, 0) scale(0.6);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.9;
+        transform: translate3d(-35px, -110px, 0) scale(1.1);
+    }
+    55% {
+        transform: translate3d(-15px, -230px, 0) scale(1.35);
+        opacity: 1;
+    }
+    80% {
+        transform: translate3d(-60px, -350px, 0) scale(0.8);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translate3d(-40px, -480px, 0) scale(0.35);
+        opacity: 0;
+    }
+}
+
+/* Trajectory 3: Sinuous undulating sine-wave ascent */
+@keyframes floatPath3 {
+    0% {
+        transform: translate3d(0, 0, 0) scale(0.5);
+        opacity: 0;
+    }
+    25% {
+        transform: translate3d(40px, -90px, 0) scale(1.15);
+        opacity: 1;
+    }
+    50% {
+        transform: translate3d(-30px, -190px, 0) scale(1.4);
+        opacity: 0.9;
+    }
+    75% {
+        transform: translate3d(45px, -290px, 0) scale(0.95);
+        opacity: 0.75;
+    }
+    100% {
+        transform: translate3d(0px, -400px, 0) scale(0.4);
+        opacity: 0;
+    }
+}
+
+/* Trajectory 4: Gentle orbital floating wander */
+@keyframes floatOrbit {
+    0% {
+        transform: rotate(0deg) translateX(35px) rotate(0deg) scale(0.75);
+        opacity: 0.4;
+    }
+    50% {
+        transform: rotate(180deg) translateX(35px) rotate(-180deg) scale(1.3);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(360deg) translateX(35px) rotate(-360deg) scale(0.75);
+        opacity: 0.4;
+    }
+}
+
+/* Trajectory 5: Sparkling pulse with vertical float */
+@keyframes floatSparkle {
+    0%, 100% {
+        transform: translateY(0) scale(0.45);
+        opacity: 0.2;
+    }
+    50% {
+        transform: translateY(-22px) scale(1.35);
+        opacity: 1;
+    }
+}
+
+/* Particle Placements & Motion Assignments */
+.mp1  { top: 85%; left: 8%;   width: 8px;  height: 8px;  animation: floatPath1 8.5s ease-in-out infinite; }
+.mp2  { top: 75%; left: 22%;  width: 12px; height: 12px; animation: floatPath2 9.2s ease-in-out infinite 1.2s; }
+.mp3  { top: 88%; left: 35%;  width: 10px; height: 10px; animation: floatPath3 7.8s ease-in-out infinite 0.5s; }
+.mp4  { top: 70%; left: 48%;  width: 7px;  height: 7px;  animation: floatPath1 10.0s ease-in-out infinite 2.5s; }
+.mp5  { top: 82%; left: 62%;  width: 14px; height: 14px; animation: floatPath2 8.8s ease-in-out infinite 1.8s; }
+.mp6  { top: 78%; left: 76%;  width: 9px;  height: 9px;  animation: floatPath3 8.0s ease-in-out infinite 3.0s; }
+.mp7  { top: 86%; left: 90%;  width: 11px; height: 11px; animation: floatPath1 9.5s ease-in-out infinite 0.9s; }
+
+.mp8  { top: 45%; left: 14%;  width: 9px;  height: 9px;  animation: floatPath2 8.4s ease-in-out infinite 2.1s; }
+.mp9  { top: 52%; left: 29%;  width: 13px; height: 13px; animation: floatPath3 9.0s ease-in-out infinite 0.7s; }
+.mp10 { top: 38%; left: 42%;  width: 8px;  height: 8px;  animation: floatPath1 7.6s ease-in-out infinite 3.2s; }
+.mp11 { top: 48%; left: 58%;  width: 15px; height: 15px; animation: floatPath2 10.2s ease-in-out infinite 1.5s; }
+.mp12 { top: 35%; left: 72%;  width: 10px; height: 10px; animation: floatPath3 8.2s ease-in-out infinite 2.7s; }
+.mp13 { top: 55%; left: 85%;  width: 7px;  height: 7px;  animation: floatPath1 8.9s ease-in-out infinite 1.1s; }
+
+/* Mid-level Orbital & Sparkle Anchors */
+.mp14 { top: 22%; left: 10%;  width: 10px; height: 10px; animation: floatOrbit 6.5s linear infinite; }
+.mp15 { top: 28%; left: 32%;  width: 7px;  height: 7px;  animation: floatSparkle 4.2s ease-in-out infinite 0.4s; }
+.mp16 { top: 18%; left: 52%;  width: 12px; height: 12px; animation: floatOrbit 8.0s linear infinite 2.0s; }
+.mp17 { top: 25%; left: 68%;  width: 8px;  height: 8px;  animation: floatSparkle 4.8s ease-in-out infinite 1.6s; }
+.mp18 { top: 20%; left: 88%;  width: 11px; height: 11px; animation: floatOrbit 7.2s linear infinite 3.5s; }
+
+/* Expanding Concentric Pulse Rings */
+.pr1 { top: 24%; left: 28%; width: 24px; height: 24px; animation-delay: 0s; }
+.pr2 { top: 60%; left: 74%; width: 28px; height: 28px; animation-delay: 2.2s; }
+.pr3 { top: 78%; left: 18%; width: 22px; height: 22px; animation-delay: 1.1s; }
+.pr4 { top: 42%; left: 82%; width: 26px; height: 26px; animation-delay: 3.4s; }
+
+/* =========================================================
+   5. REDUCED MOTION ACCESSIBILITY
+========================================================= */
+@media (prefers-reduced-motion: reduce) {
+    .flash-wave-beam,
+    .flash-wave-secondary,
+    .flash-wave-pulse,
+    .movable-particle,
+    .pulse-ring-dot {
+        animation: none !important;
+        opacity: 0.35 !important;
+    }
+}

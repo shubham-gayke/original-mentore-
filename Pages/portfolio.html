@@ -7,10 +7,15 @@
   <title>Portfolio - Mentore Solution</title>
 
   <link rel="stylesheet" href="/Style/Portfolio.css">
+  <link rel="stylesheet" href="/Style/three-experience.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+  <!-- THREE.JS GLOBAL AMBIENT BACKGROUND -->
+  <div id="threejs-container">
+    <canvas id="threejs-ambient-canvas"></canvas>
+  </div>
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="nav-container">
@@ -358,6 +363,10 @@
     </div>
   </div>
 
+  <!-- THREE.JS AMBIENT EXPERIENCE & 3D INTERACTION ENGINE -->
+  <script src="../Script/three.min.js"></script>
+  <script src="../Script/three-scene.js"></script>
+  <script src="../Script/three-effects.js"></script>
   <script src="/Script/Portfolio.js"></script>
 </body>
 

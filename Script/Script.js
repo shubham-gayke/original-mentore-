@@ -209,22 +209,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!hamburger || !mobileMenu) return;
 
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    mobileMenu.classList.toggle("active");
+  hamburger.setAttribute("role", "button");
+  hamburger.setAttribute("tabindex", "0");
+  hamburger.setAttribute("aria-label", "Open navigation menu");
+  hamburger.setAttribute("aria-expanded", "false");
+
+  const toggleMobileMenu = (event) => {
+      if (event) {
+          event.preventDefault();
+          event.stopPropagation();
+      }
+
+      const isOpen = mobileMenu.classList.toggle("active");
+      hamburger.classList.toggle("active", isOpen);
+
+      hamburger.setAttribute(
+          "aria-expanded",
+          isOpen ? "true" : "false"
+      );
+
+      hamburger.setAttribute(
+          "aria-label",
+          isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+  };
+
+  hamburger.addEventListener("click", toggleMobileMenu);
+
+  hamburger.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+          toggleMobileMenu(event);
+      }
   });
 
-
-  /* Close menu when clicking a link */
-
-  const mobileLinks =
-    mobileMenu.querySelectorAll("a");
+  const mobileLinks = mobileMenu.querySelectorAll("a");
 
   mobileLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.remove("active");
-      hamburger.classList.remove("active");
-    });
+      link.addEventListener("click", () => {
+          mobileMenu.classList.remove("active");
+          hamburger.classList.remove("active");
+          hamburger.setAttribute("aria-expanded", "false");
+          hamburger.setAttribute("aria-label", "Open navigation menu");
+      });
+  });
+
+  window.addEventListener("resize", () => {
+      if (window.innerWidth > 1000) {
+          mobileMenu.classList.remove("active");
+          hamburger.classList.remove("active");
+          hamburger.setAttribute("aria-expanded", "false");
+          hamburger.setAttribute("aria-label", "Open navigation menu");
+      }
   });
 });
 

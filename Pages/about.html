@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Mentore Solution</title>
-  <link rel="stylesheet" href="/Style/About.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Mentore Solution</title>
+    <link rel="stylesheet" href="/Style/About.css">
+    <link rel="stylesheet" href="/Style/three-experience.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -14,72 +15,59 @@
 
     <div class="grid-overlay"></div>
 
-    <div class="particles">
-
-        <span class="particle" style="left: 8%; animation-duration: 12s;"></span>
-
-        <span class="particle" style="left: 18%; animation-duration: 18s; animation-delay: 2s;"></span>
-
-        <span class="particle" style="left: 32%; animation-duration: 15s; animation-delay: 5s;"></span>
-
-        <span class="particle" style="left: 48%; animation-duration: 20s; animation-delay: 1s;"></span>
-
-        <span class="particle" style="left: 62%; animation-duration: 14s; animation-delay: 4s;"></span>
-
-        <span class="particle" style="left: 76%; animation-duration: 17s; animation-delay: 7s;"></span>
-
-        <span class="particle" style="left: 90%; animation-duration: 13s; animation-delay: 3s;"></span>
-
+    <!-- THREE.JS GLOBAL AMBIENT BACKGROUND -->
+    <div id="threejs-container">
+        <canvas id="threejs-ambient-canvas"></canvas>
     </div>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="nav-container">
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
 
-      <!-- LEFT LOGO -->
-      <div class="logo">
-        <a href="/Image/logo.png"></a>
-      </div>
+            <!-- LEFT LOGO -->
+            <div class="logo">
+                <a href="/Image/logo.png"></a>
+            </div>
 
-      <!-- CENTER MENU -->
-      <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="./about.html" class="active">About Us</a></li>
-        <li><a href="./traninig.html">Training</a></li>
-        <li><a href="./itservices.html">IT Services</a></li>
-        <li><a href="./portfolio.html">Portfolio</a></li>
-        <li><a href="./placement.html">Placement</a></li>
-        <li><a href="./career.html">Career</a></li>
-        <li><a href="./gallery.html">Gallery</a></li>
-        <li><a href="./contact.html">Contact</a></li>
+            <!-- CENTER MENU -->
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html" class="active">About Us</a></li>
+                <li><a href="./traninig.html">Training</a></li>
+                <li><a href="./itservices.html">IT Services</a></li>
+                <li><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./placement.html">Placement</a></li>
+                <li><a href="./career.html">Career</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./contact.html">Contact</a></li>
 
-      </ul>
+            </ul>
 
-      <!-- RIGHT NUMBER -->
+            <!-- RIGHT NUMBER -->
 
 
-      <!-- MOBILE MENU ICON -->
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
+            <!-- MOBILE MENU ICON -->
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
 
-    </div>
+        </div>
 
-    <!-- MOBILE DROPDOWN -->
-    <ul class="mobile-menu" id="mobileMenu">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="./about.html" class="active">About Us</a></li>
-      <li><a href="./traninig.html">Training</a></li>
-      <li><a href="./itservices.html">IT Services</a></li>
-      <li><a href="./portfolio.html">Portfolio</a></li>
-      <li><a href="./placement.html">Placement</a></li>
-      <li><a href="./career.html">Career</a></li>
-      <li><a href="./gallery.html">Gallery</a></li>
-      <li><a href="./contact.html">Contact</a></li>
+        <!-- MOBILE DROPDOWN -->
+        <ul class="mobile-menu" id="mobileMenu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./about.html" class="active">About Us</a></li>
+            <li><a href="./traninig.html">Training</a></li>
+            <li><a href="./itservices.html">IT Services</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./placement.html">Placement</a></li>
+            <li><a href="./career.html">Career</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./contact.html">Contact</a></li>
 
-    </ul>
-  </header>
-  <main>
+        </ul>
+    </header>
+    <main>
 
 
         <!-- HERO -->
@@ -737,91 +725,95 @@
     </main>
 
 
-  <!-- FOOTER SECTION -->
-  <footer class="footer">
-    <div class="footer-container">
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="footer-container">
 
-      <!-- Column 1: LOGO + About -->
-      <div class="footer-col">
+            <!-- Column 1: LOGO + About -->
+            <div class="footer-col">
 
-        <!-- YOUR LOGO TEXT -->
-        <div class="footer-logo ">
-          <a href="./logo.png"></a>
+                <!-- YOUR LOGO TEXT -->
+                <div class="footer-logo ">
+                    <a href="./logo.png"></a>
+                </div>
+
+                <p class="footer-about">
+                    We provide industry-focused training programs designed to help students and professionals
+                    enhance their skills and build successful careers.
+                </p>
+
+                <!-- SOCIAL ICONS -->
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="/Pages/about.html">About Us</a></li>
+                    <li><a href="/Pages/training.html">Training Programs</a></li>
+                    <li><a href="/Pages/itservices.html">Our Services</a></li>
+                    <li><a href="/Pages/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Popular Courses -->
+            <div class="footer-col">
+                <h3>Popular Courses</h3>
+                <ul>
+                    <li><a href="#">Full Stack Development</a></li>
+                    <li><a href="#">DevOps & Cloud Computing</a></li>
+                    <li><a href="#">Digital Marketing</a></li>
+                    <li><a href="#">Data Analytics & Power BI</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Phone: +91 9881922922</li>
+                    <li>Email: mentoresolution@gmail.com </li>
+                    <li>Address:Karve Nagar, Pune, Maharashtra </li>
+                </ul>
+            </div>
+
         </div>
 
-        <p class="footer-about">
-          We provide industry-focused training programs designed to help students and professionals
-          enhance their skills and build successful careers.
-        </p>
-
-        <!-- SOCIAL ICONS -->
-        <div class="footer-social">
-          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        <div class="footer-bottom">
+            <p>© 2025 Mentore Solution. All Rights Reserved</p>
         </div>
-      </div>
-
-      <!-- Column 2: Quick Links -->
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="/Pages/about.html">About Us</a></li>
-          <li><a href="/Pages/training.html">Training Programs</a></li>
-          <li><a href="/Pages/itservices.html">Our Services</a></li>
-          <li><a href="/Pages/contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3: Popular Courses -->
-      <div class="footer-col">
-        <h3>Popular Courses</h3>
-        <ul>
-          <li><a href="#">Full Stack Development</a></li>
-          <li><a href="#">DevOps & Cloud Computing</a></li>
-          <li><a href="#">Digital Marketing</a></li>
-          <li><a href="#">Data Analytics & Power BI</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 4: Contact -->
-      <div class="footer-col">
-        <h3>Contact Us</h3>
-        <ul>
-          <li>Phone: +91 9881922922</li>
-          <li>Email: mentoresolution@gmail.com </li>
-          <li>Address:Karve Nagar, Pune, Maharashtra </li>
-        </ul>
-      </div>
-
+    </footer>
+    <!-- Floating Combo Button -->
+    <div class="floating-btn">
+        <button class="main-btn">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+        <div class="child-btns">
+            <a href="https://wa.me/919876543210" target="_blank" class="child-btn whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="./contact.html" class="child-btn contact">
+                <i class="fas fa-envelope"></i> Contact
+            </a>
+        </div>
     </div>
 
-    <div class="footer-bottom">
-      <p>© 2025 Mentore Solution. All Rights Reserved</p>
-    </div>
-  </footer>
-  <!-- Floating Combo Button -->
-  <div class="floating-btn">
-    <button class="main-btn">
-      <i class="fas fa-comment-dots"></i>
-    </button>
-    <div class="child-btns">
-      <a href="https://wa.me/919876543210" target="_blank" class="child-btn whatsapp">
-        <i class="fab fa-whatsapp"></i> WhatsApp
-      </a>
-      <a href="./contact.html" class="child-btn contact">
-        <i class="fas fa-envelope"></i> Contact
-      </a>
-    </div>
-  </div>
 
 
 
 
-
-  <script src="/Script/About.js"></script>
+    <script src="/Script/About.js"></script>
+    <!-- THREE.JS AMBIENT EXPERIENCE & 3D INTERACTION ENGINE -->
+    <script src="../Script/three.min.js"></script>
+    <script src="../Script/three-scene.js"></script>
+    <script src="../Script/three-effects.js"></script>
 </body>
 
 </html>

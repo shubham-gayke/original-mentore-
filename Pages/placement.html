@@ -6,9 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Placement - Mentore Solution</title>
   <link rel="stylesheet" href="/Style/Placement.css">
+  <link rel="stylesheet" href="/Style/three-experience.css">
 </head>
 
 <body>
+  <!-- THREE.JS GLOBAL AMBIENT BACKGROUND -->
+  <div id="threejs-container">
+    <canvas id="threejs-ambient-canvas"></canvas>
+  </div>
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="nav-container">
@@ -226,53 +231,53 @@
         </div>
       </div>
     </section>
-<!-- =====================================================
+    <!-- =====================================================
      OUR STUDENTS WORK HERE - COMPANY SLIDER
 ===================================================== -->
 
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <section class="partners-section">
-        <h2>Our Students Placed in Top Companies</h2>
+      <h2>Our Students Placed in Top Companies</h2>
 
-        <div class="partners-slider">
-            <div class="slide-track">
-                <!-- 15 LOGOS - These links 100% work -->
-                <div class="partner-item"><img
-                        src="https://i.pinimg.com/1200x/b0/de/60/b0de6006aee3fce314fc2575019d0b0d.jpg"></div>
-                <div class="partner-item"><img
-                        src="https://i.pinimg.com/736x/d2/32/5e/d2325e4ea3a16ec25ff35603c8003a5f.jpg"></div>
-                <div class="partner-item"><img
-                        src="https://i.pinimg.com/1200x/06/1d/ca/061dcafd76f4d6ff18db3e18fe8ca316.jpg"></div>
-                <div class="partner-item"><img
-                        src="https://i.pinimg.com/736x/09/ac/64/09ac6418962ad0d21280f9e3321e0d01.jpg"></div>
-                <div class="partner-item"><img
-                        src="https://i.pinimg.com/736x/cc/06/71/cc06711bdcf55b7352e5e74f0d8e2d41.jpg"></div>
-                <div class="partner-item"><img
-                        src="https://i.pinimg.com/1200x/97/83/22/9783222e98b0d5141519b41e7203ff9a.jpg"></div>
-                <div class="partner-item"><img
-                        src="https://i.pinimg.com/1200x/7c/b5/df/7cb5dfa2786c33a3411f252313aeefb3.jpg"></div>
-                <div class="partner-item"><img
-                        src="https://i.pinimg.com/736x/c8/dc/e1/c8dce16663e5e2d215231332e9e6287e.jpg"></div>
-                <div class="partner-item"><img
-                        src="https://i.pinimg.com/1200x/fd/b3/b9/fdb3b9b6bb84c009ed500547542e9333.jpg"></div>
-                <div class="partner-item"><img
-                        src="https://i.pinimg.com/736x/2d/bb/0f/2dbb0ff968953a734143faa96e1ddff1.jpg"></div>
-                <div class="partner-item"><img
-                        src="https://i.pinimg.com/1200x/4d/c5/74/4dc5742211ef451e37634edfa2e6101a.jpg"></div>
-                <div class="partner-item"><img
-                        src="https://i.pinimg.com/1200x/ed/96/16/ed96168483f887cbbfa92bac32cf776f.jpg"></div>
-                <div class="partner-item"><img
-                        src="https://i.pinimg.com/1200x/a0/e6/91/a0e6913a3473cc42c7f0212b65399d46.jpg"></div>
-                <div class="partner-item"><img
-                        src="https://i.pinimg.com/1200x/f0/9f/60/f09f6008338a2e8e41249c0421dbf2ee.jpg"></div>
-                <div class="partner-item"><img
-                        src="https://i.pinimg.com/736x/63/5b/1d/635b1da90ddb7165cf167ca61e38f85f.jpg"></div>
-
-
+      <div class="partners-slider">
+        <div class="slide-track">
+          <!-- 15 LOGOS - These links 100% work -->
+          <div class="partner-item"><img src="https://i.pinimg.com/1200x/b0/de/60/b0de6006aee3fce314fc2575019d0b0d.jpg">
+          </div>
+          <div class="partner-item"><img src="https://i.pinimg.com/736x/d2/32/5e/d2325e4ea3a16ec25ff35603c8003a5f.jpg">
+          </div>
+          <div class="partner-item"><img src="https://i.pinimg.com/1200x/06/1d/ca/061dcafd76f4d6ff18db3e18fe8ca316.jpg">
+          </div>
+          <div class="partner-item"><img src="https://i.pinimg.com/736x/09/ac/64/09ac6418962ad0d21280f9e3321e0d01.jpg">
+          </div>
+          <div class="partner-item"><img src="https://i.pinimg.com/736x/cc/06/71/cc06711bdcf55b7352e5e74f0d8e2d41.jpg">
+          </div>
+          <div class="partner-item"><img src="https://i.pinimg.com/1200x/97/83/22/9783222e98b0d5141519b41e7203ff9a.jpg">
+          </div>
+          <div class="partner-item"><img src="https://i.pinimg.com/1200x/7c/b5/df/7cb5dfa2786c33a3411f252313aeefb3.jpg">
+          </div>
+          <div class="partner-item"><img src="https://i.pinimg.com/736x/c8/dc/e1/c8dce16663e5e2d215231332e9e6287e.jpg">
+          </div>
+          <div class="partner-item"><img src="https://i.pinimg.com/1200x/fd/b3/b9/fdb3b9b6bb84c009ed500547542e9333.jpg">
+          </div>
+          <div class="partner-item"><img src="https://i.pinimg.com/736x/2d/bb/0f/2dbb0ff968953a734143faa96e1ddff1.jpg">
+          </div>
+          <div class="partner-item"><img src="https://i.pinimg.com/1200x/4d/c5/74/4dc5742211ef451e37634edfa2e6101a.jpg">
+          </div>
+          <div class="partner-item"><img src="https://i.pinimg.com/1200x/ed/96/16/ed96168483f887cbbfa92bac32cf776f.jpg">
+          </div>
+          <div class="partner-item"><img src="https://i.pinimg.com/1200x/a0/e6/91/a0e6913a3473cc42c7f0212b65399d46.jpg">
+          </div>
+          <div class="partner-item"><img src="https://i.pinimg.com/1200x/f0/9f/60/f09f6008338a2e8e41249c0421dbf2ee.jpg">
+          </div>
+          <div class="partner-item"><img src="https://i.pinimg.com/736x/63/5b/1d/635b1da90ddb7165cf167ca61e38f85f.jpg">
+          </div>
 
 
-            </div>
+
+
         </div>
+      </div>
     </section>
 
 
@@ -368,7 +373,11 @@
 
 
 
+  <!-- THREE.JS AMBIENT EXPERIENCE & 3D INTERACTION ENGINE -->
+  <script src="../Script/three.min.js"></script>
+  <script src="../Script/three-scene.js"></script>
+  <script src="../Script/three-effects.js"></script>
+  <script src="/Script/Placement.js"></script>
 </body>
-<script src="/Script/Placement.js"></script>
 
 </html>
