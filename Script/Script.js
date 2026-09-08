@@ -86,7 +86,7 @@
 
 
     /* =================================================
-       START
+       START & SCROLL OBSERVER
     ================================================= */
 
     isMuted = false;
@@ -94,15 +94,56 @@
     video.volume = 1;
     updateMuteIcon();
 
-    var startPromise = video.play();
-    if (startPromise !== undefined) {
-      startPromise.catch(function () {
-        /* Autoplay with audio blocked — fallback to muted */
-        isMuted = true;
-        video.muted = true;
-        updateMuteIcon();
-        video.play().catch(function () {});
-      });
+    var hasInitialized = false;
+    var heroSection = document.getElementById("heroVideoSection");
+
+    if (heroSection && "IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            // Scrolled into view
+            if (hasInitialized) {
+              // Restart from first video
+              currentIndex = 0;
+              video.src = videoSources[currentIndex];
+              video.load();
+              video.currentTime = 0;
+              video.muted = isMuted;
+            } else {
+              hasInitialized = true;
+            }
+            
+            var playP = video.play();
+            if (playP !== undefined) {
+              playP.catch(function () {
+                isMuted = true;
+                video.muted = true;
+                updateMuteIcon();
+                video.play().catch(function () {});
+              });
+            }
+          } else {
+            // Scrolled out of view
+            hasInitialized = true;
+            video.pause();
+            if (transitionTimeout) clearTimeout(transitionTimeout);
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      observer.observe(heroSection);
+    } else {
+      // Fallback
+      var startPromise = video.play();
+      if (startPromise !== undefined) {
+        startPromise.catch(function () {
+          /* Autoplay with audio blocked — fallback to muted */
+          isMuted = true;
+          video.muted = true;
+          updateMuteIcon();
+          video.play().catch(function () {});
+        });
+      }
     }
 
 
@@ -115,7 +156,15 @@
         video.pause();
         if (transitionTimeout) clearTimeout(transitionTimeout);
       } else {
-        video.play().catch(function () {});
+        if (heroSection) {
+          var rect = heroSection.getBoundingClientRect();
+          var isVisible = (rect.top <= (window.innerHeight || document.documentElement.clientHeight)) && (rect.bottom >= 0);
+          if (isVisible) {
+            video.play().catch(function () {});
+          }
+        } else {
+          video.play().catch(function () {});
+        }
       }
     });
 
