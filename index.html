@@ -99,12 +99,6 @@
                 </li>
 
                 <li>
-                    <a href="./Pages/career.html">
-                        Career
-                    </a>
-                </li>
-
-                <li>
                     <a href="./Pages/traninig.html">
                         Training & Placement
                     </a>
@@ -144,12 +138,6 @@
             <li>
                 <a href="./index.html" class="active">
                     Home
-                </a>
-            </li>
-
-            <li>
-                <a href="./Pages/career.html">
-                    Career
                 </a>
             </li>
 
@@ -346,7 +334,6 @@
                     <div class="tech">Java</div>
                     <div class="tech">.NET</div>
                 </div>
-                <button class="consult-btn">Get a Free Consultation</button>
             </div>
 
             <!-- Box 2 -->
@@ -376,7 +363,6 @@
                     <div class="tech">React</div>
                     <div class="tech">Vue.js</div>
                 </div>
-                <button class="consult-btn">Get a Free Consultation</button>
             </div>
 
             <!-- Box 3 -->
@@ -406,7 +392,6 @@
                     <div class="tech">Kubernetes</div>
                     <div class="tech">Jenkins</div>
                 </div>
-                <button class="consult-btn">Get a Free Consultation</button>
             </div>
 
             <!-- Box 4 -->
@@ -434,7 +419,6 @@
                     <div class="tech">Cross-Technology</div>
                     <div class="tech">Vendor Agnostic</div>
                 </div>
-                <button class="consult-btn">Get a Free Consultation</button>
             </div>
 
             <!-- Box 5 -->
@@ -463,7 +447,6 @@
                     <div class="tech">Analytics</div>
                     <div class="tech">SEO Tools</div>
                 </div>
-                <button class="consult-btn">Get a Free Consultation</button>
             </div>
 
             <!-- Box 6 -->
@@ -492,7 +475,6 @@
                     <div class="tech">Custom APIs</div>
                     <div class="tech">Webhooks</div>
                 </div>
-                <button class="consult-btn">Get a Free Consultation</button>
             </div>
 
             <!-- Box 7 -->
@@ -521,7 +503,6 @@
                     <div class="tech">Swift</div>
                     <div class="tech">Kotlin</div>
                 </div>
-                <button class="consult-btn">Get a Free Consultation</button>
             </div>
 
             <!-- Box 8 -->
@@ -550,7 +531,6 @@
                     <div class="tech">Odoo</div>
                     <div class="tech">SAP</div>
                 </div>
-                <button class="consult-btn">Get a Free Consultation</button>
             </div>
 
             <!-- Box 9 -->
@@ -579,7 +559,6 @@
                     <div class="tech">Encryption</div>
                     <div class="tech">Zero Trust</div>
                 </div>
-                <button class="consult-btn">Get a Free Consultation</button>
             </div>
 
         </div>
@@ -731,9 +710,13 @@
                     if (audio.muted || audio.paused) {
                         icon.className = "fa-solid fa-volume-xmark";
                         muteBtn.setAttribute("aria-label", "Unmute background audio");
+                        muteBtn.classList.remove("glow-green");
+                        muteBtn.classList.add("glow-red");
                     } else {
                         icon.className = "fa-solid fa-volume-high";
                         muteBtn.setAttribute("aria-label", "Mute background audio");
+                        muteBtn.classList.remove("glow-red");
+                        muteBtn.classList.add("glow-green");
                     }
                 }
 
@@ -1191,714 +1174,6 @@
 
         </div>
 
-    </section>
-
-    <!-- =========================================================
-     SUCCESS STORIES SECTION
-========================================================= -->
-
-    <section class="success-section">
-
-
-        <div class="success-header">
-
-            <div class="success-label">
-
-                <i class="fa-solid fa-circle-check"></i>
-
-                Student Experiences
-
-            </div>
-
-
-            <h2 class="success-title">
-
-                Real Students.
-
-                <span>
-                    Real Growth.
-                </span>
-
-            </h2>
-
-
-            <p class="success-subtitle">
-
-                Hear from students who transformed their skills,
-                built real-world experience and moved forward in
-                their careers.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="success-slider">
-
-            <div class="success-track" id="successTrack">
-
-
-                <!-- CARD 1 -->
-
-                <div class="success-box">
-
-                    <div class="review-top">
-
-                        <div class="stars">
-
-                            ★★★★★
-
-                            <span>
-                                5.0
-                            </span>
-
-                        </div>
-
-
-                        <span class="verified">
-
-                            <i class="fa-solid fa-check"></i>
-
-                            Verified
-
-                        </span>
-
-                    </div>
-
-
-                    <div class="quote-icon">
-                        “
-                    </div>
-
-
-                    <p class="review">
-
-                        I joined the Full Stack Development program with
-                        very limited project experience. The live projects,
-                        code reviews and interview preparation helped me
-                        become much more confident as a developer.
-
-                    </p>
-
-
-                    <div class="student-details">
-
-                        <h3>
-                            Ananya Sharma
-                        </h3>
-
-                        <p class="student-role">
-                            Junior Full Stack Developer
-                        </p>
-
-
-                        <div class="student-meta">
-
-                            <span>
-
-                                <i class="fa-solid fa-building"></i>
-
-                                TechNova Solutions
-
-                            </span>
-
-
-                            <strong>
-                                Placed
-                            </strong>
-
-                        </div>
-
-
-                        <small>
-                            Full Stack Development
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- CARD 2 -->
-
-                <div class="success-box">
-
-                    <div class="review-top">
-
-                        <div class="stars">
-
-                            ★★★★½
-
-                            <span>
-                                4.5
-                            </span>
-
-                        </div>
-
-
-                        <span class="verified">
-
-                            <i class="fa-solid fa-check"></i>
-
-                            Verified
-
-                        </span>
-
-                    </div>
-
-
-                    <div class="quote-icon">
-                        “
-                    </div>
-
-
-                    <p class="review">
-
-                        The DevOps training was practical and industry
-                        focused. Working with Linux, Docker and AWS helped
-                        me understand how applications are actually
-                        deployed in production environments.
-
-                    </p>
-
-
-                    <div class="student-details">
-
-                        <h3>
-                            Rahul Verma
-                        </h3>
-
-                        <p class="student-role">
-                            Cloud Operations Engineer
-                        </p>
-
-
-                        <div class="student-meta">
-
-                            <span>
-
-                                <i class="fa-solid fa-building"></i>
-
-                                CloudEdge Technologies
-
-                            </span>
-
-
-                            <strong>
-                                Placed
-                            </strong>
-
-                        </div>
-
-
-                        <small>
-                            DevOps & Cloud Computing
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- CARD 3 -->
-
-                <div class="success-box">
-
-                    <div class="review-top">
-
-                        <div class="stars">
-
-                            ★★★★★
-
-                            <span>
-                                5.0
-                            </span>
-
-                        </div>
-
-
-                        <span class="verified">
-
-                            <i class="fa-solid fa-check"></i>
-
-                            Verified
-
-                        </span>
-
-                    </div>
-
-
-                    <div class="quote-icon">
-                        “
-                    </div>
-
-
-                    <p class="review">
-
-                        The practical approach made the Digital Marketing
-                        course very useful. Working on campaigns and case
-                        studies helped me understand how marketing works
-                        in a real business environment.
-
-                    </p>
-
-
-                    <div class="student-details">
-
-                        <h3>
-                            Sneha Patil
-                        </h3>
-
-                        <p class="student-role">
-                            Digital Marketing Executive
-                        </p>
-
-
-                        <div class="student-meta">
-
-                            <span>
-
-                                <i class="fa-solid fa-building"></i>
-
-                                GrowthHive Media
-
-                            </span>
-
-
-                            <strong>
-                                Placed
-                            </strong>
-
-                        </div>
-
-
-                        <small>
-                            Digital Marketing
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- CARD 4 -->
-
-                <div class="success-box">
-
-                    <div class="review-top">
-
-                        <div class="stars">
-
-                            ★★★★½
-
-                            <span>
-                                4.5
-                            </span>
-
-                        </div>
-
-
-                        <span class="verified">
-
-                            <i class="fa-solid fa-check"></i>
-
-                            Verified
-
-                        </span>
-
-                    </div>
-
-
-                    <div class="quote-icon">
-                        “
-                    </div>
-
-
-                    <p class="review">
-
-                        Real-world datasets and Power BI dashboards helped
-                        me understand analytics much better. The interview
-                        preparation also helped me present my projects
-                        professionally.
-
-                    </p>
-
-
-                    <div class="student-details">
-
-                        <h3>
-                            Manoj Kulkarni
-                        </h3>
-
-                        <p class="student-role">
-                            Data Analyst
-                        </p>
-
-
-                        <div class="student-meta">
-
-                            <span>
-
-                                <i class="fa-solid fa-building"></i>
-
-                                InsightWorks
-
-                            </span>
-
-
-                            <strong>
-                                Placed
-                            </strong>
-
-                        </div>
-
-
-                        <small>
-                            Data Analytics & Power BI
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- CARD 5 -->
-
-                <div class="success-box">
-
-                    <div class="review-top">
-
-                        <div class="stars">
-
-                            ★★★★★
-
-                            <span>
-                                5.0
-                            </span>
-
-                        </div>
-
-
-                        <span class="verified">
-
-                            <i class="fa-solid fa-check"></i>
-
-                            Verified
-
-                        </span>
-
-                    </div>
-
-
-                    <div class="quote-icon">
-                        “
-                    </div>
-
-
-                    <p class="review">
-
-                        The UI/UX program gave me practical experience from
-                        research to final prototype. Building projects for
-                        my portfolio gave me strong examples to discuss
-                        during interviews.
-
-                    </p>
-
-
-                    <div class="student-details">
-
-                        <h3>
-                            Priya Mehta
-                        </h3>
-
-                        <p class="student-role">
-                            Junior UI/UX Designer
-                        </p>
-
-
-                        <div class="student-meta">
-
-                            <span>
-
-                                <i class="fa-solid fa-building"></i>
-
-                                PixelCraft Studio
-
-                            </span>
-
-
-                            <strong>
-                                Placed
-                            </strong>
-
-                        </div>
-
-
-                        <small>
-                            UI/UX Design
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- CARD 6 -->
-
-                <div class="success-box">
-
-                    <div class="review-top">
-
-                        <div class="stars">
-
-                            ★★★★½
-
-                            <span>
-                                4.5
-                            </span>
-
-                        </div>
-
-
-                        <span class="verified">
-
-                            <i class="fa-solid fa-check"></i>
-
-                            Verified
-
-                        </span>
-
-                    </div>
-
-
-                    <div class="quote-icon">
-                        “
-                    </div>
-
-
-                    <p class="review">
-
-                        I had studied Python before but struggled to connect
-                        it with real projects. The practical sessions helped
-                        me understand data cleaning, visualization and
-                        machine learning.
-
-                    </p>
-
-
-                    <div class="student-details">
-
-                        <h3>
-                            Rohit Agarwal
-                        </h3>
-
-                        <p class="student-role">
-                            Python Data Associate
-                        </p>
-
-
-                        <div class="student-meta">
-
-                            <span>
-
-                                <i class="fa-solid fa-building"></i>
-
-                                DataBridge Labs
-
-                            </span>
-
-
-                            <strong>
-                                Placed
-                            </strong>
-
-                        </div>
-
-
-                        <small>
-                            Data Science with Python
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- CARD 7 -->
-
-                <div class="success-box">
-
-                    <div class="review-top">
-
-                        <div class="stars">
-
-                            ★★★★★
-
-                            <span>
-                                5.0
-                            </span>
-
-                        </div>
-
-
-                        <span class="verified">
-
-                            <i class="fa-solid fa-check"></i>
-
-                            Verified
-
-                        </span>
-
-                    </div>
-
-
-                    <div class="quote-icon">
-                        “
-                    </div>
-
-
-                    <p class="review">
-
-                        I was looking for structured Java training with
-                        project experience. The combination of Java,
-                        Spring Boot and SQL helped me become more confident
-                        with backend development.
-
-                    </p>
-
-
-                    <div class="student-details">
-
-                        <h3>
-                            Akash Joshi
-                        </h3>
-
-                        <p class="student-role">
-                            Java Developer
-                        </p>
-
-
-                        <div class="student-meta">
-
-                            <span>
-
-                                <i class="fa-solid fa-building"></i>
-
-                                CodeAxis Technologies
-
-                            </span>
-
-
-                            <strong>
-                                Placed
-                            </strong>
-
-                        </div>
-
-
-                        <small>
-                            Java & Spring Boot
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- CARD 8 -->
-
-                <div class="success-box">
-
-                    <div class="review-top">
-
-                        <div class="stars">
-
-                            ★★★★★
-
-                            <span>
-                                5.0
-                            </span>
-
-                        </div>
-
-
-                        <span class="verified">
-
-                            <i class="fa-solid fa-check"></i>
-
-                            Verified
-
-                        </span>
-
-                    </div>
-
-
-                    <div class="quote-icon">
-                        “
-                    </div>
-
-
-                    <p class="review">
-
-                        Resume guidance, project reviews and mock interviews
-                        helped me improve significantly. I felt much more
-                        prepared when I started attending actual technical
-                        interviews.
-
-                    </p>
-
-
-                    <div class="student-details">
-
-                        <h3>
-                            Neha Deshmukh
-                        </h3>
-
-                        <p class="student-role">
-                            Software Engineer
-                        </p>
-
-
-                        <div class="student-meta">
-
-                            <span>
-
-                                <i class="fa-solid fa-building"></i>
-
-                                NextGen Systems
-
-                            </span>
-
-
-                            <strong>
-                                Placed
-                            </strong>
-
-                        </div>
-
-
-                        <small>
-                            Software Development
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
 
 
 
@@ -2278,26 +1553,12 @@
                 <!-- SOCIAL ICONS -->
 
                 <div class="footer-social">
-
-                    <a href="#" class="social-link">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-
-
-                    <a href="#" class="social-link">
+                    <a href="https://www.instagram.com/mentore_solution/" class="social-link" target="_blank">
                         <i class="fab fa-instagram"></i>
                     </a>
-
-
-                    <a href="#" class="social-link">
+                    <a href="https://www.linkedin.com/in/mentore-solution-/" class="social-link" target="_blank">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-
-
-                    <a href="#" class="social-link">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-
                 </div>
 
             </div>
@@ -2448,33 +1709,7 @@
      MOBILE JOB POPUP
 ===================================================== -->
 
-    <div id="jobPopup" class="job-popup" aria-hidden="true">
 
-        <!-- CLOSE BUTTON -->
-        <button type="button" id="jobClose" class="job-close" aria-label="Close job popup">
-            ×
-        </button>
-
-        <!-- JOB BUTTON -->
-        <a href="#" id="jobButton" class="job-button" aria-label="Get Me a Job">
-            <svg class="job-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path
-                    d="M20 11.5C20 15.64 16.42 19 12 19C10.73 19 9.53 18.72 8.48 18.22L4 20L5.42 16.05C4.53 14.81 4 13.22 4 11.5C4 7.36 7.58 4 12 4C16.42 4 20 7.36 20 11.5Z"
-                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-
-                <path d="M8 11.5H8.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-
-                <path d="M12 11.5H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-
-                <path d="M16 11.5H16.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-            </svg>
-
-            <span class="job-text">
-                Get Me a Job
-            </span>
-        </a>
-
-    </div>
 
 
 

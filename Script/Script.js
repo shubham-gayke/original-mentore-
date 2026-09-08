@@ -29,16 +29,21 @@
 
     function updateMuteIcon() {
       var icon = muteBtn.querySelector("i");
+      
       if (!icon) return;
 
       if (isMuted) {
         icon.className = "fa-solid fa-volume-xmark";
         muteBtn.setAttribute("aria-label", "Unmute video audio");
         muteBtn.setAttribute("title", "Unmute video audio");
+        muteBtn.classList.remove("glow-green");
+        muteBtn.classList.add("glow-red");
       } else {
         icon.className = "fa-solid fa-volume-high";
         muteBtn.setAttribute("aria-label", "Mute video audio");
         muteBtn.setAttribute("title", "Mute video audio");
+        muteBtn.classList.remove("glow-red");
+        muteBtn.classList.add("glow-green");
       }
     }
 
