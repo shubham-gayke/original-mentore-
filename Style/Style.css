@@ -1864,7 +1864,7 @@ a {
     max-width: 1400px;
     margin: auto;
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr 1fr 1.3fr;
     column-gap: 70px;
     row-gap: 50px;
 }
