@@ -9,27 +9,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  /* background: #ffffff; */
-    background:
-
-                radial-gradient(
-                    ellipse at 18% 18%,
-                    rgba(255, 250, 190, 0.85),
-                    transparent 30%
-                ),
-
-                radial-gradient(
-                    ellipse at 80% 80%,
-                    rgba(172, 154, 95, 0.35),
-                    transparent 35%
-                ),
-
-                linear-gradient(
-                    135deg,
-                    #f4e7b2 0%,
-                    #ffad00 48%,
-                    #3e3c37 100%
-                );
+  background: #f4e7b2;
 }
 
 /* NAVBAR WRAPPER */
@@ -37,12 +17,14 @@ body {
   width: 100%;
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 999;
-  padding: 2px 0;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  padding: 0;
+  background: #fea501;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: 0.3s ease-in-out;
 }
 
@@ -54,13 +36,84 @@ body {
   justify-content: space-between;
 }
 
-/* LOGO LEFT */
-.logo a {
-  display: block;
-  width: 150px;
-  height: 75px;
-  background: url("/Image/logo.png") no-repeat center/contain;
-  text-indent: -9999px;
+/* =========================================================
+   CSS LOGO
+========================================================= */
+.css-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transform: scale(0.95);
+  transition: 0.3s ease-in-out;
+}
+
+.logo-mark {
+  position: relative;
+  width: 48px;
+  height: 36px;
+}
+
+.logo-mark .pill {
+  width: 11px;
+  height: 28px;
+  border-radius: 12px;
+  transform: rotate(30deg);
+}
+
+.black-pill {
+  background-color: #0d0d0d;
+  position: absolute;
+  left: 4px;
+  top: 2px;
+}
+
+.red-pill {
+  background-color: #ff151f;
+  position: absolute;
+  left: 17px;
+  top: 2px;
+}
+
+.circles {
+  position: absolute;
+  left: 33px;
+  top: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.small-circle {
+  width: 9px;
+  height: 9px;
+  background-color: #0d0d0d;
+  border-radius: 50%;
+}
+
+.large-circle {
+  width: 15px;
+  height: 15px;
+  background-color: #0d0d0d;
+  border-radius: 50%;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #0d0d0d;
+  font-family: 'Montserrat', 'Inter', 'Segoe UI', sans-serif;
+  line-height: 1.05;
+}
+
+.logo-text .mentore,
+.logo-text .solution {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #0d0d0d;
 }
 
 /* CENTER MENU */
@@ -73,7 +126,7 @@ body {
 
 .nav-links a {
   font-size: 16px;
-  color: rgb(241, 237, 237);
+  color: #222;
   font-weight: 700;
   text-decoration: none;
   padding-bottom: 4px;
@@ -99,7 +152,7 @@ body {
 .hamburger span {
   width: 100%;
   height: 3px;
-  background: white;
+  background: #111;
 }
 
 .mobile-menu {
@@ -122,27 +175,21 @@ body {
 
 /* HERO SECTION */
 .hero-section {
-  margin-top: 80px;
+  margin-top: 0;
   /* background: linear-gradient(135deg, #fefefe 0%, #424b58 100%); */
   background:
-    radial-gradient(
-        circle at 80% 20%,
-        rgba(255, 193, 7, 0.30),
-        transparent 35%
-    ),
+    radial-gradient(circle at 80% 20%,
+      rgba(255, 193, 7, 0.30),
+      transparent 35%),
 
-    radial-gradient(
-        circle at 10% 90%,
-        rgba(255, 193, 7, 0.18),
-        transparent 38%
-    ),
+    radial-gradient(circle at 10% 90%,
+      rgba(255, 193, 7, 0.18),
+      transparent 38%),
 
-    linear-gradient(
-        135deg,
-        #666037 0%,
-        #292929 50%,
-        #aa8828 100%
-    ); 
+    linear-gradient(135deg,
+      #666037 0%,
+      #292929 50%,
+      #aa8828 100%);
 
   padding: 100px 20px 60px;
   text-align: center;
@@ -158,16 +205,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-      circle at 20% 50%,
+  background: radial-gradient(circle at 20% 50%,
       rgba(245, 158, 11, 0.15) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 80% 20%,
+      transparent 50%),
+    radial-gradient(circle at 80% 20%,
       rgba(251, 191, 36, 0.1) 0%,
-      transparent 50%
-    );
+      transparent 50%);
   z-index: 0;
 }
 
@@ -808,107 +851,110 @@ body {
 
 
 /* =========================================================
-   TRAINING MEDIA SHOWCASE (moved from homepage)
+   TRAINING VIDEO SHOWCASE — 16:9 Ratio, Fully Visible
 ========================================================= */
 
 .training-media-showcase {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    min-height: 350px;
-    max-height: 550px;
-    overflow: hidden;
-    background: #000;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .training-media-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
 }
 
 .trn-media-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.8s ease;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
 }
 
 .trn-media-item.active {
-    opacity: 1;
+  opacity: 1;
 }
 
 .trn-media-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.1) 0%,
-        transparent 30%,
-        transparent 70%,
-        rgba(0, 0, 0, 0.3) 100%
-    );
-    z-index: 1;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.1) 0%,
+      transparent 30%,
+      transparent 70%,
+      rgba(0, 0, 0, 0.3) 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .trn-mute-btn {
-    position: absolute;
-    top: 90px;
-    right: 25px;
-    z-index: 10;
-    width: 44px;
-    height: 44px;
-    border: none;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    color: #fff;
-    font-size: 18px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: 100px;
+  right: 112px;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(236, 17, 166, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .trn-mute-btn:hover {
-    background: rgba(245, 158, 11, 0.8);
-    transform: scale(1.1);
+  background: rgba(36, 186, 228, 0.8);
+  transform: scale(1.1);
 }
 
 .trn-mute-btn:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+.trn-mute-btn.muted-state {
+  background: rgba(220, 38, 38, 0.8); /* Red background */
+}
+
+.trn-mute-btn.playing-state {
+  background: rgba(34, 197, 94, 0.8); /* Green background */
 }
 
 @media (max-width: 768px) {
-    .training-media-showcase {
-        height: 45vh;
-        min-height: 250px;
-    }
+  .training-media-showcase {
+    margin-top: 0;
+  }
 
-    .trn-mute-btn {
-        top: 80px;
-        right: 15px;
-        width: 38px;
-        height: 38px;
-        font-size: 16px;
-    }
+  .trn-mute-btn {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 480px) {
-    .training-media-showcase {
-        height: 35vh;
-        min-height: 200px;
-    }
+  .training-media-showcase {
+    margin-top: 0;
+  }
 }

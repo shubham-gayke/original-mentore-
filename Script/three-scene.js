@@ -146,6 +146,7 @@
     // ==========================================
     // 2. DYNAMIC 3D CONSTELLATION LINES (NEURAL MESH)
     // ==========================================
+    /* Lines removed as requested
     var MAX_LINES = width < 768 ? 300 : 700;
     var linePositions = new Float32Array(MAX_LINES * 6);
     var lineColors = new Float32Array(MAX_LINES * 6);
@@ -163,6 +164,7 @@
 
     var lineSystem = new THREE.LineSegments(lineGeometry, lineMaterial);
     scene.add(lineSystem);
+    */
 
     // ==========================================
     // 3. FLOATING HOLOGRAPHIC GEOMETRIC ACCENTS
@@ -317,9 +319,11 @@
 
       // Update particle positions & build dynamic proximity mesh
       var posArray = particleGeometry.attributes.position.array;
+      /*
       var linePosArray = lineGeometry.attributes.position.array;
       var lineColArray = lineGeometry.attributes.color.array;
       var lineIdx = 0;
+      */
 
       for (var i = 0; i < PARTICLE_COUNT; i++) {
         var i3 = i * 3;
@@ -350,6 +354,7 @@
         posArray[i3 + 1] = py;
         posArray[i3 + 2] = pz;
 
+        /*
         if (lineIdx < MAX_LINES * 6 && i % 2 === 0) {
           for (var j = i + 1; j < PARTICLE_COUNT; j += 3) {
             var j3 = j * 3;
@@ -383,10 +388,12 @@
             }
           }
         }
+        */
       }
 
       particleGeometry.attributes.position.needsUpdate = true;
 
+      /*
       for (var k = lineIdx; k < MAX_LINES * 6; k++) {
         linePosArray[k] = 0;
         lineColArray[k] = 0;
@@ -394,6 +401,7 @@
       lineGeometry.setDrawRange(0, lineIdx / 3);
       lineGeometry.attributes.position.needsUpdate = true;
       lineGeometry.attributes.color.needsUpdate = true;
+      */
 
       renderer.render(scene, camera);
     }

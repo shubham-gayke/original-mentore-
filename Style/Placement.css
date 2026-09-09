@@ -195,12 +195,14 @@ img {
     width: 100%;
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 999;
-    padding: 2px 0;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    padding: 0;
+    background: #f4e7b2;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease-in-out;
 }
 
@@ -212,6 +214,87 @@ img {
     justify-content: space-between;
 }
 
+/* =========================================================
+   CSS LOGO
+========================================================= */
+.css-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transform: scale(0.95);
+    transition: 0.3s ease-in-out;
+}
+
+.logo-mark {
+    position: relative;
+    width: 48px;
+    height: 36px;
+}
+
+.logo-mark .pill {
+    width: 11px;
+    height: 28px;
+    border-radius: 12px;
+    transform: rotate(30deg);
+}
+
+.black-pill {
+    background-color: #0d0d0d;
+    position: absolute;
+    left: 4px;
+    top: 2px;
+}
+
+.red-pill {
+    background-color: #ff151f;
+    position: absolute;
+    left: 17px;
+    top: 2px;
+}
+
+.circles {
+    position: absolute;
+    left: 33px;
+    top: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.small-circle {
+    width: 9px;
+    height: 9px;
+    background-color: #0d0d0d;
+    border-radius: 50%;
+}
+
+.large-circle {
+    width: 15px;
+    height: 15px;
+    background-color: #0d0d0d;
+    border-radius: 50%;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #0d0d0d;
+    font-family: 'Montserrat', 'Inter', 'Segoe UI', sans-serif;
+    line-height: 1.05;
+}
+
+.logo-text .mentore,
+.logo-text .solution {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #0d0d0d;
+}
+
+/* LOGO LEFT (Legacy support) */
 .logo a {
     display: block;
     width: 150px;
@@ -229,16 +312,17 @@ img {
 
 .nav-links a {
     font-size: 16px;
-    color: rgb(241, 237, 237);
+    color: #222;
     font-weight: 700;
     padding-bottom: 4px;
+    text-decoration: none;
     transition: 0.3s ease;
     border-bottom: 2px solid transparent;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-    border-bottom-color: #f59e0b;
+    border-bottom: 2px solid #f59e0b;
 }
 
 .whatsapp-number {
@@ -261,7 +345,7 @@ img {
 .hamburger span {
     width: 100%;
     height: 3px;
-    background: #fff;
+    background: #111;
 }
 
 .navbar.scrolled .hamburger span {
